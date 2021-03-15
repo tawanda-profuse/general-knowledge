@@ -78,35 +78,39 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'Which nuts are used in marzipan?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'Walnuts', correct: false },
+      { text: 'Almonds', correct: true },
+      { text: 'Cashew', correct: false },
+      { text: 'Pistachio', correct: false }
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: 'What is the most famous Mexican beer?',
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: 'Carlsberg', correct: false },
+      { text: 'Tequilla', correct: false },
+      { text: 'Corona', correct: true },
+      { text: 'Amsterdam', correct: false }
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'Which country is the origin of the cocktail Mojito?',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'Russia', correct: false },
+      { text: 'Zimbabwe', correct: false },
+      { text: 'Brazil', correct: false },
+      { text: 'Cuba', correct: true }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'What is Japanese sake made from?',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: 'Rice', correct: true },
+      { text: 'Potatoes', correct: false },
+      { text: 'Wheat', correct: false },
+      { text: 'Cotton', correct: false },
     ]
   }
 ]
