@@ -78,35 +78,93 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'Which nuts are used in marzipan?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'Walnuts', correct: false },
+      { text: 'Almonds', correct: true },
+      { text: 'Cashew', correct: false },
+      { text: 'Pistachio', correct: false }
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: 'What is the most famous Mexican beer?',
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: 'Carlsberg', correct: false },
+      { text: 'Tequilla', correct: false },
+      { text: 'Corona', correct: true },
+      { text: 'Amsterdam', correct: false }
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'Which country is the origin of the cocktail Mojito?',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'Russia', correct: false },
+      { text: 'Zimbabwe', correct: false },
+      { text: 'Brazil', correct: false },
+      { text: 'Cuba', correct: true }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'What is Japanese sake made from?',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: 'Rice', correct: true },
+      { text: 'Potatoes', correct: false },
+      { text: 'Wheat', correct: false },
+      { text: 'Cotton', correct: false }
+    ]
+  },
+  {
+    question: 'Which vitamin is the only one that you will not find in an egg?',
+    answers: [
+      { text: 'Vitamin D', correct: false },
+      { text: 'Vitamin A', correct: false },
+      { text: 'Vitamin C', correct: true },
+      { text: 'Vitamin E', correct: false }
+    ]
+  },
+  {
+    question: 'What is the chemical formula for Table Salt?',
+    answers: [
+      { text: 'H20', correct: false },
+      { text: 'CO2', correct: false },
+      { text: 'E = MC2', correct: false },
+      { text: 'NaC1', correct: true }
+    ]
+  },
+  {
+    question: 'What does IPA stand for?',
+    answers: [
+      { text: 'Indian Pale Ale', correct: true },
+      { text: 'Initial Public Aqcuisition', correct: false },
+      { text: 'International Phonetic Alphabet', correct: false },
+      { text: 'International Phonetic Association', correct: false }
+    ]
+  },
+  {
+    question: 'Which meat is used in Glamorgan sausages?',
+    answers: [
+      { text: 'Beef', correct: false },
+      { text: 'None, they are made from cheese', correct: true },
+      { text: 'Pork', correct: false },
+      { text: 'Chicken breast', correct: false }
+    ]
+  },
+  {
+    question: 'What ingredient is included in food in a Florentine style?',
+    answers: [
+      { text: 'Parsley', correct: false },
+      { text: 'Eggs, they are made from cheese', correct: false },
+      { text: 'Spinach', correct: true },
+      { text: 'Flour', correct: false }
+    ]
+  },
+  {
+    question: 'Which fish is the main ingredient of Scotch Woodcock?',
+    answers: [
+      { text: 'Sardines', correct: false },
+      { text: 'Tuna', correct: false },
+      { text: 'Hake', correct: false },
+      { text: 'Anchovy', correct: true }
     ]
   }
-]
+];
