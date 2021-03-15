@@ -8,6 +8,7 @@
     --hue-wrong: 0;
     --hue-correct: 145;
   }
+<<<<<<< HEAD
   ul a{
     text-decoration: none;
     color: white;
@@ -16,6 +17,8 @@
     text-decoration: none;
     color: greenyellow;
   }
+=======
+>>>>>>> a50975695f9d5decf625717f266fd5841c7b4efb
   body {
     --hue: var(--hue-neutral);
     padding: 0;
