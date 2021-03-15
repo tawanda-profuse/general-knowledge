@@ -4,11 +4,10 @@
   }
   
   :root {
-    --hue-neutral: 200;
+    --hue-neutral: 1000; /*200*/
     --hue-wrong: 0;
     --hue-correct: 145;
   }
-  
   body {
     --hue: var(--hue-neutral);
     padding: 0;
