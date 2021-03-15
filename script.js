@@ -110,7 +110,61 @@ const questions = [
       { text: 'Rice', correct: true },
       { text: 'Potatoes', correct: false },
       { text: 'Wheat', correct: false },
-      { text: 'Cotton', correct: false },
+      { text: 'Cotton', correct: false }
+    ]
+  },
+  {
+    question: 'Which vitamin is the only one that you will not find in an egg?',
+    answers: [
+      { text: 'Vitamin D', correct: false },
+      { text: 'Vitamin A', correct: false },
+      { text: 'Vitamin C', correct: true },
+      { text: 'Vitamin E', correct: false }
+    ]
+  },
+  {
+    question: 'What is the chemical formula for Table Salt?',
+    answers: [
+      { text: 'H20', correct: false },
+      { text: 'CO2', correct: false },
+      { text: 'E = MC2', correct: false },
+      { text: 'NaC1', correct: true }
+    ]
+  },
+  {
+    question: 'What does IPA stand for?',
+    answers: [
+      { text: 'Indian Pale Ale', correct: true },
+      { text: 'Initial Public Aqcuisition', correct: false },
+      { text: 'International Phonetic Alphabet', correct: false },
+      { text: 'International Phonetic Association', correct: false }
+    ]
+  },
+  {
+    question: 'Which meat is used in Glamorgan sausages?',
+    answers: [
+      { text: 'Beef', correct: false },
+      { text: 'None, they are made from cheese', correct: true },
+      { text: 'Pork', correct: false },
+      { text: 'Chicken breast', correct: false }
+    ]
+  },
+  {
+    question: 'What ingredient is included in food in a Florentine style?',
+    answers: [
+      { text: 'Parsley', correct: false },
+      { text: 'Eggs, they are made from cheese', correct: false },
+      { text: 'Spinach', correct: true },
+      { text: 'Flour', correct: false }
+    ]
+  },
+  {
+    question: 'Which fish is the main ingredient of Scotch Woodcock?',
+    answers: [
+      { text: 'Sardines', correct: false },
+      { text: 'Tuna', correct: false },
+      { text: 'Hake', correct: false },
+      { text: 'Anchovy', correct: true }
     ]
   }
-]
+];
