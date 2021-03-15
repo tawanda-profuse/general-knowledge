@@ -3,6 +3,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const questionImageElement = document.getElementById('questionimage')
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -25,8 +26,9 @@ function setNextQuestion() {
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-function showQuestion(question) {
+function showQuestion(question, questionimage) {
   questionElement.innerText = question.question
+  questionImageElement.image = questionimage
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
@@ -79,6 +81,7 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: 'Which nuts are used in marzipan?',
+    questionimage: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-frame-shot-of-raw-almonds-royalty-free-image-683814187-1537885519.jpg?crop=0.66635xw:1xh;center,top&resize=480:*',
     answers: [
       { text: 'Walnuts', correct: false },
       { text: 'Almonds', correct: true },
@@ -88,6 +91,7 @@ const questions = [
   },
   {
     question: 'What is the most famous Mexican beer?',
+    questionimage: 'https://easydrinkbygroutas.com/wp-content/uploads/2020/11/0013_Corona-extra-beerx355mlbot.png',
     answers: [
       { text: 'Carlsberg', correct: false },
       { text: 'Tequilla', correct: false },
@@ -168,3 +172,4 @@ const questions = [
     ]
   }
 ];
+
