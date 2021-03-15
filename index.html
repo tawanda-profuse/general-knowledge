@@ -6,20 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-    <title>Quiz App</title>
+    <title>Food</title>
+    <script defer src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="navstuff">
-        <nav>
+    <input type="checkbox" id="check" name="" value="">
+    <label for="check">
+        <div class="fas fa-bars" id="btn"></div>
+        <div class="fas fa-times" id="cancel"> </div>
+    </label>
+    <div class="sidebar">
+        <header>Quizzes</header>
             <ul>
-                <a href="geo.html"><li>Geography</li></a>
-                <li>Items</li>
-                <li>Items</li>
-                <li>Items</li>
-                <li>Items</li>
+                <li class="active"><a href="index.html">Food</a></li>
+                <li><a href="geo.html">Geography</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="celeb.html">Celebrities</a></li>
             </ul>
-        </nav>
     </div>
+    <section></section>
     <br>
     <div class="container">
         <div class="hide" id="question-container">
@@ -42,5 +49,10 @@
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
     </div>
+    <footer>
+    <div class="footer-bottom">
+        <p>Quiz App. designed by <span><a href="https://github.com/tawanda-profuse" target="_blank">Taw</a></span></p>
+    </div>
+    </footer>
 </body>
 </html>
