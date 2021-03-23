@@ -1,6 +1,25 @@
 {
   "dependencies": {
+    "express": "^4.17.1",
     "node": "^15.10.0",
     "nodemon": "^2.0.7"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "quiz-application",
+  "description": "A simple quiz application with a few questions and answers.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tawanda-profuse/Quiz-Application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tawanda-profuse/Quiz-Application/issues"
+  },
+  "homepage": "https://github.com/tawanda-profuse/Quiz-Application#readme"
 }
