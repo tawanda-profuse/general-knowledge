@@ -28,7 +28,7 @@ function setNextQuestion() {
 
 function showQuestion(question, questionimage) {
   questionElement.innerText = question.question
-  questionImageElement.image = questionimage
+  questionImageElement.image = question.questionimage
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
