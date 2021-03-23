@@ -28,7 +28,7 @@ function setNextQuestion() {
 
 function showQuestion(question, questionimage) {
   questionElement.innerText = question.question
-  questionImageElement.image = question.questionimage
+  questionImageElement.src = question.questionimage
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
@@ -78,7 +78,7 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
-var questions = [ //const
+const questions = [ //const
   {
     question: 'Which nuts are used in marzipan?',
     questionimage: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-frame-shot-of-raw-almonds-royalty-free-image-683814187-1537885519.jpg?crop=0.66635xw:1xh;center,top&resize=480:*',
