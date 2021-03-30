@@ -6,9 +6,9 @@
 
 <p>Type the following commands after extracting the Zip file.</p>
 <ol>
-  <b><li>npm install</li></b>
-  <b><li>npm init</li></b>
-  <b><li>node server</li></b>
+  <li><b>npm install</b></li>
+  <li><b>npm init</b></li>
+  <li><b>node server</b></li>
   <li>Lastly, open your browser at the port specified in server.js (should be port 8080)</li>
 </ol>
 
