@@ -4,7 +4,7 @@
 
 <h2>Installation Steps:</h2>
 
-<p>Type the following commands after extracting the Zip file.</p>
+<p>After extracting the zip file, type the following commands in your local terminal where the folder is located.</p>
 <ol>
   <li><b>npm install</b></li>
   <li><b>npm init</b></li>
