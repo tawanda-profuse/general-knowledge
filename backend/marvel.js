@@ -28,7 +28,7 @@ function setNextQuestion() {
 
 function showQuestion(question, questionimage) {
   questionElement.innerText = question.question
-  questionImageElement.image = questionimage
+  questionImageElement.src = question.questionimage
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
@@ -81,6 +81,7 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: 'What is the name of Thor’s hammer?',
+    questionimage: 'assets/marvel_pics/thor_hammer.jpg',
     answers: [
       { text: 'Vanir', correct: false },
       { text: 'Mjolnir', correct: true },

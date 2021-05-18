@@ -120,6 +120,7 @@
     color: white;
     outline: none;
     font-size: 20px;
+    cursor: pointer;
   }
   
   .btn:hover {
@@ -141,6 +142,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
+    cursor: pointer;
   }
   
   .controls {
@@ -152,71 +154,27 @@
   .hide {
     display: none;
   }
-  footer{
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: tomato;
-    height: auto;
-    width: 100vw;
-    font-family:'Times New Roman', Times, serif;
-    padding-top: 40px;
-    color: white;
-  }
-  .footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-content h3{
-    font-size: 1.1rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;
-  }
-  .footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-  }
-  .socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-  }
-  .socialslist{
-    margin: 0 10px;
-}
-.socialslinks{
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.1rem;
-  transition: color .4s ease;
-}
-.socialslinks:hover{
-  color: green;
-}
 
 .footer-bottom{
+  position: absolute;
+  bottom: 0;
   background: tomato;
-  width: 100vw;
-  padding: 20px 0;
+  height: 5%;
+  width: 100%;
+  font-family:'Times New Roman', Times, serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
   text-align: center;
+  display: block;
 }
 .footer-bottom p{
-  font-size: 24px;
+  font-size: 20px;
   word-spacing: 2px;
   text-transform: capitalize;
 }
 .footer-bottom span{
   text-transform: uppercase;
-  /* opacity: .4; */
   font-weight: 200;
 }
 .footer-bottom span a{

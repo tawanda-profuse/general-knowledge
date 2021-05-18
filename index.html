@@ -1,61 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" /> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="/design/styles.css">
-    <script defer src="/backend/script.js"></script>
-    <title>Food</title>
-    <link rel="stylesheet" href="/design/menu.css">
-</head>
-<body> 
-    <input type="checkbox" id="check" name="" value="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/design/styles.css" />
+    <link rel="stylesheet" href="/design/menu.css" />
+    <title>Quiz about Food</title>
+  </head>
+  <body>
+    <input type="checkbox" id="check" name="" value="" />
     <label for="check">
-        <span id="btn"><img src="./assets/menu_white_48dp.svg" alt=""></span>
-        <span id="cancel"><img src="./assets/close_white_24dp.svg" alt=""></span>
+      <span id="btn"><img src="./assets/menu_white_48dp.svg" alt="" /></span>
+      <span id="cancel"
+        ><img src="./assets/close_white_24dp.svg" alt=""
+      /></span>
     </label>
     <div class="sidebar">
-        <header>Quizzes</header>
-            <ul>
-                <li class="active"><a href="index.html"><span><img src="./assets/lunch_dining_white_24dp.svg" alt=""></span> Food</a></li>
-                <li><a href="/pages/geo.html"><span><img src="./assets/public_white_24dp.svg" alt=""></span> Geography</a></li>
-                <li><a href="/pages/sports.html"><span><img src="./assets/sports_soccer_white_24dp.svg" alt=""></span> Sports</a></li>
-                <li><a href="/pages/celeb.html"><span><img src="./assets/emoji_people_white_24dp.svg" alt=""></span> Celebrities</a></li>
-                <li><a href="/pages/politics.html"><span><img src="./assets/politics.svg" alt=""></span> Politics</a></li>
-                <li><a href="/pages/television.html"><span><img src="./assets/tv_white_24dp.svg" alt=""></span> TV</a></li>
-                <li><a href="/pages/music.html"><span><img src="./assets/music.svg" alt=""></span> Music</a></li>
-                <li><a href="/pages/marvel.html"><span><img src="./assets/marvel.svg" alt=""></span> Marvel</a></li>
-            </ul>
+      <header>Quizzes</header>
+      <ul>
+        <li class="active">
+          <a href="index.html"
+            ><span
+              ><img src="./assets/lunch_dining_white_24dp.svg" alt=""
+            /></span>
+            Food</a
+          >
+        </li>
+        <li>
+          <a href="/pages/geo.html"
+            ><span><img src="./assets/public_white_24dp.svg" alt="" /></span>
+            Geography</a
+          >
+        </li>
+        <li>
+          <a href="/pages/sports.html"
+            ><span
+              ><img src="./assets/sports_soccer_white_24dp.svg" alt=""
+            /></span>
+            Sports</a
+          >
+        </li>
+        <li>
+          <a href="/pages/celeb.html"
+            ><span
+              ><img src="./assets/emoji_people_white_24dp.svg" alt=""
+            /></span>
+            Celebrities</a
+          >
+        </li>
+        <li>
+          <a href="/pages/politics.html"
+            ><span><img src="./assets/politics.svg" alt="" /></span> Politics</a
+          >
+        </li>
+        <li>
+          <a href="/pages/television.html"
+            ><span><img src="./assets/tv_white_24dp.svg" alt="" /></span> TV</a
+          >
+        </li>
+        <li>
+          <a href="/pages/music.html"
+            ><span><img src="./assets/music.svg" alt="" /></span> Music</a
+          >
+        </li>
+        <li>
+          <a href="/pages/marvel.html"
+            ><span><img src="./assets/marvel.svg" alt="" /></span> Marvel</a
+          >
+        </li>
+      </ul>
     </div>
-    <br>
+    <br />
     <div class="container">
-        <div class="hide" id="question-container">
-            <div id="question">
-                <h1>Question</h1>
-            </div>
-            <br>
-            <div id="questionimage" class="question-picture">
-                <img width="300px" src="https://tenmorebites.files.wordpress.com/2016/06/glamorgan-sausages.jpg" height="200px" alt="An image of the question">
-            </div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
+      <div class="hide" id="question-container">
+        <div id="question">
+          <h1>Question</h1>
         </div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
+        <br />
+        <div class="question-picture"> 
+          <img
+            id="questionimage"
+            width="300px"
+            src="#"
+            height="200px"
+            alt="An image of the question"
+          />
         </div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+      </div>
     </div>
-    <footer>
     <div class="footer-bottom">
-        <p>Quiz App. designed by <span><a href="https://github.com/tawanda-profuse" target="_blank">Taw</a></span></p>
+      <footer>
+        <p>
+          &copy;Quiz App. designed by
+          <span
+            ><a href="https://github.com/tawanda-profuse" target="_blank"
+              >Taw</a
+            ></span
+          >
+        </p>
+      </footer>
     </div>
-    </footer> 
-</body>
+    <script defer src="/backend/script.js"></script>
+  </body>
 </html>

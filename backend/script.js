@@ -76,12 +76,12 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
-}
+} 
 
-const questions = [ //const
+const questions = [ 
   {
     question: 'Which nuts are used in marzipan?',
-    questionimage: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-frame-shot-of-raw-almonds-royalty-free-image-683814187-1537885519.jpg?crop=0.66635xw:1xh;center,top&resize=480:*',
+    questionimage: 'assets/food_pics/almonds.jpg',
     answers: [
       { text: 'Walnuts', correct: false },
       { text: 'Almonds', correct: true },
@@ -91,7 +91,7 @@ const questions = [ //const
   },
   {
     question: 'What is the most famous Mexican beer?',
-    questionimage: 'https://easydrinkbygroutas.com/wp-content/uploads/2020/11/0013_Corona-extra-beerx355mlbot.png',
+    questionimage: 'assets/food_pics/corona.png',
     answers: [
       { text: 'Carlsberg', correct: false },
       { text: 'Tequilla', correct: false },
@@ -101,6 +101,7 @@ const questions = [ //const
   },
   {
     question: 'Which country is the origin of the cocktail Mojito?',
+    questionimage: 'assets/food_pics/mojito.jpg',
     answers: [
       { text: 'Russia', correct: false },
       { text: 'Zimbabwe', correct: false },
@@ -110,6 +111,7 @@ const questions = [ //const
   },
   {
     question: 'What is Japanese sake made from?',
+    questionimage: 'assets/food_pics/japan_sake.jpg',
     answers: [
       { text: 'Rice', correct: true },
       { text: 'Potatoes', correct: false },
@@ -119,6 +121,7 @@ const questions = [ //const
   },
   {
     question: 'Which vitamin is the only one that you will not find in an egg?',
+    questionimage: 'assets/food_pics/eggs.jpg',
     answers: [
       { text: 'Vitamin D', correct: false },
       { text: 'Vitamin A', correct: false },
@@ -128,6 +131,7 @@ const questions = [ //const
   },
   {
     question: 'What is the chemical formula for Table Salt?',
+    questionimage: 'assets/food_pics/salt.jpg',
     answers: [
       { text: 'H20', correct: false },
       { text: 'CO2', correct: false },
@@ -136,16 +140,18 @@ const questions = [ //const
     ]
   },
   {
-    question: 'What does IPA stand for?',
+    question: 'What alcoholic consumable has the acronym IPA?',
+    questionimage: 'assets/food_pics/ipa-logo.png',
     answers: [
       { text: 'Indian Pale Ale', correct: true },
-      { text: 'Initial Public Aqcuisition', correct: false },
-      { text: 'International Phonetic Alphabet', correct: false },
-      { text: 'International Phonetic Association', correct: false }
+      { text: 'Ice-Cream Pie Avocadoes', correct: false },
+      { text: 'Intensified Pudding Apples', correct: false },
+      { text: 'Innovations for Poverty Action', correct: false }
     ]
   },
   {
     question: 'Which meat is used in Glamorgan sausages?',
+    questionimage: 'assets/food_pics/glamorgan-sausages.jpg',
     answers: [
       { text: 'Beef', correct: false },
       { text: 'None, they are made from cheese', correct: true },
@@ -155,15 +161,17 @@ const questions = [ //const
   },
   {
     question: 'What ingredient is included in food in a Florentine style?',
+    questionimage: 'assets/food_pics/florentine.jpeg',
     answers: [
-      { text: 'Parsley', correct: false },
-      { text: 'Eggs, they are made from cheese', correct: false },
+      { text: 'Bacon', correct: false },
+      { text: 'Cucumbers', correct: false },
       { text: 'Spinach', correct: true },
       { text: 'Flour', correct: false }
     ]
   },
   {
     question: 'Which fish is the main ingredient of Scotch Woodcock?',
+    questionimage: 'assets/food_pics/scotch_woodcock.jpg',
     answers: [
       { text: 'Sardines', correct: false },
       { text: 'Tuna', correct: false },
