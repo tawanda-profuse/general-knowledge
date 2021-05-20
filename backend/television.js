@@ -171,6 +171,7 @@ const questions = [
   },
   {
     question: 'In what year was the first episode of Coronation Street broadcasted on ITV?',
+    questionimage: '/assets/tv_pics/coronation_street.jpg',
     answers: [
       { text: '1800', correct: false },
       { text: '2006', correct: false },
