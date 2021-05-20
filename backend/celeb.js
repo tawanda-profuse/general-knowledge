@@ -81,7 +81,7 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: `Which singer was known amongst other things as 'The King of Pop'?`,
-    questionimage: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-frame-shot-of-raw-almonds-royalty-free-image-683814187-1537885519.jpg?crop=0.66635xw:1xh;center,top&resize=480:*',
+    questionimage: '/assets/celeb_pics/pop-king.jpg',
     answers: [
       { text: 'Kanye West', correct: false },
       { text: 'Michael Jackson', correct: true },
@@ -91,16 +91,17 @@ const questions = [
   },
   {
     question: `What is Cher's last name?`,
-    questionimage: 'https://easydrinkbygroutas.com/wp-content/uploads/2020/11/0013_Corona-extra-beerx355mlbot.png',
+    questionimage: '/assets/celeb_pics/cher.jpg',
     answers: [
       { text: 'Leonardo Di Caprio', correct: false },
       { text: 'Will Smith', correct: false },
-      { text: 'Sarkisian - full name Cherilyn Sarkisian', correct: true },
+      { text: 'Sarkisian', correct: true },
       { text: 'Chris Hemsworth', correct: false }
     ]
   },
   {
     question: `What is the name of Kim Kardashian's eldest child?`,
+    questionimage: '/assets/celeb_pics/north-west.png',
     answers: [
       { text: 'Blu Ivy', correct: false },
       { text: 'Stormi', correct: false },
@@ -110,6 +111,7 @@ const questions = [
   },
   {
     question: 'Who was the winner of the first ever UK series of ‘I’m A Celebrity… Get Me Out Of Here!’?',
+    questionimage: '/assets/celeb_pics/im-a-celeb.jpg',
     answers: [
       { text: 'Tony Blackburn', correct: true },
       { text: 'Bill Gates', correct: false },
@@ -119,6 +121,7 @@ const questions = [
   },
   {
     question: 'Which English supermodel was born in Streatham in May 1970?',
+    questionimage: '/assets/celeb_pics/naomi-campbell.jpg',
     answers: [
       { text: 'Tyra Banks', correct: false },
       { text: 'Victoria Beckham', correct: false },
@@ -128,6 +131,7 @@ const questions = [
   },
   {
     question: `Which footballer has the most Instagram followers in the world - as of 2020?`,
+    questionimage: '/assets/celeb_pics/instagram.jpg',
     answers: [
       { text: 'Paul Pogba', correct: false },
       { text: 'Lebron James', correct: false },
@@ -137,6 +141,7 @@ const questions = [
   },
   {
     question: `Tom Cruise is an outspoken member of which religion?`,
+    questionimage: '/assets/celeb_pics/tom-cruise.jpeg',
     answers: [
       { text: 'Scientology', correct: true },
       { text: 'Judaism', correct: false },
@@ -146,6 +151,7 @@ const questions = [
   },
   {
     question: 'Who is Dolly Parton married to?',
+    questionimage: '/assets/celeb_pics/dolly-parton.jpg',
     answers: [
       { text: 'Jaiden Smith', correct: false },
       { text: 'Carl Dean', correct: true },
@@ -155,6 +161,7 @@ const questions = [
   },
   {
     question: 'American singer Stefani Joanne Angelina Germanotta is best known by which stagename?',
+    questionimage: '/assets/celeb_pics/lady-gaga.jpg',
     answers: [
       { text: 'Dua Lipa', correct: false },
       { text: 'Billie Eilish', correct: false },
@@ -164,6 +171,7 @@ const questions = [
   },
   {
     question: 'Taylor Swift grew up on what type of farm?',
+    questionimage: '/assets/celeb_pics/christmas-tree-farm.jpg',
     answers: [
       { text: 'Marijuana farm', correct: false },
       { text: 'Pine Tree farm', correct: false },
