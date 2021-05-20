@@ -28,7 +28,7 @@ function setNextQuestion() {
 
 function showQuestion(question, questionimage) {
   questionElement.innerText = question.question
-  questionImageElement.image = question.questionimage
+  questionImageElement.src = question.questionimage
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
@@ -78,9 +78,10 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
-var questions = [ //const
+var questions = [
   {
     question: 'Who was the only British Prime Minister to be assassinated?',
+    questionimage: '/assets/politics_pics/assasin.jpg',
     answers: [
       { text: 'Spencer Perceval - May 1812', correct: true },
       { text: 'Robert Mugabe - June 2000', correct: false },
@@ -90,6 +91,7 @@ var questions = [ //const
   },
   {
     question: 'How long does Prime Minister’s Questions last in the UK?',
+    questionimage: '/assets/politics_pics/questions.jpg',
     answers: [
       { text: '1 week', correct: false },
       { text: '4 months', correct: false },
@@ -99,6 +101,7 @@ var questions = [ //const
   },
   {
     question: 'How many Members of Parliament (MPs) are there in the UK?',
+    questionimage: '/assets/politics_pics/parliament.jpg',
     answers: [
       { text: '650', correct: true },
       { text: '300', correct: false },
@@ -108,6 +111,7 @@ var questions = [ //const
   },
   {
     question: 'What is the middle name of Angela Merkel?',
+    questionimage: '/assets/politics_pics/merkel.jpg',
     answers: [
       { text: 'Selena', correct: false },
       { text: 'Margarette', correct: false },
@@ -117,6 +121,7 @@ var questions = [ //const
   },
   {
     question: "America's Republican Party is commonly referred to as the GOP - what does the GOP stand for?",
+    questionimage: '/assets/politics_pics/republican-logo.png',
     answers: [
       { text: 'Government Over Populated', correct: false },
       { text: 'Giant Original Politicians', correct: false },
@@ -126,6 +131,7 @@ var questions = [ //const
   },
   {
     question: "Who was Donald Trump's vice president?",
+    questionimage: '/assets/politics_pics/mike-pence.jpg',
     answers: [
       { text: 'Ted Cruz', correct: false },
       { text: 'Trevor Noah', correct: false },
@@ -135,6 +141,7 @@ var questions = [ //const
   },
   {
     question: 'In which year did Britain originally join the EEC, now known as the European Union?',
+    questionimage: '/assets/politics_pics/europe-uk.jpg',
     answers: [
       { text: '1973', correct: true },
       { text: '2005', correct: false },
@@ -144,6 +151,7 @@ var questions = [ //const
   },
   {
     question: 'Which of the following are the founding members of the European Union?',
+    questionimage: '/assets/politics_pics/flags.jpg',
     answers: [
       { text: 'USA, Jamaica, Australia, China, Cuba, Russia', correct: false },
       { text: 'Belgium, France, West Germany, Italy, Luxembourg, Netherlands', correct: true },
@@ -153,6 +161,7 @@ var questions = [ //const
   },
   {
     question: 'What is the name given to the group of people who make sure MPs attend important votes?',
+    questionimage: '/assets/politics_pics/whips.jpg',
     answers: [
       { text: 'Advocates', correct: false },
       { text: 'Commanders', correct: false },
@@ -162,6 +171,7 @@ var questions = [ //const
   },
   {
     question: 'On what subject was the first referendum in Britain?',
+    questionimage: '/assets/politics_pics/vote.png',
     answers: [
       { text: 'Changing the official language (1980)', correct: false },
       { text: 'Changing the national flag colors (2000)', correct: false },
