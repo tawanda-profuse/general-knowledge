@@ -156,7 +156,6 @@
   }
 
 .footer-bottom{
-  /* position: fixed; */
   position: absolute;
   bottom: 0;
   background: tomato;
@@ -201,11 +200,17 @@
   .footer-bottom{
     position: fixed;
   }
+  .footer-bottom p{
+    font-size: 16px;
+  }
   .btn-grid{
     display: grid;
     grid-template-columns: repeat(1, auto);
     gap: 10px;
     margin: 20px 0;
+  }
+  button.btn{
+    font-size: 16px;
   }
 }
 
