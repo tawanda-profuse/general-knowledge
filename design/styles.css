@@ -156,6 +156,7 @@
   }
 
 .footer-bottom{
+  /* position: fixed; */
   position: absolute;
   bottom: 0;
   background: tomato;
@@ -183,6 +184,29 @@
 }
 .footer-bottom span a:hover{
   color: white;
+}
+@media screen and (min-width: 360px) and (max-width: 600px){
+  .container{
+    width: 90%;
+    max-width: 90%;
+    padding-top: 80%;
+    padding-bottom: 50%;
+  }
+  #question{
+    font-size: 20px;
+  }
+  .question-picture img{
+    width: 100%;
+  }
+  .footer-bottom{
+    position: fixed;
+  }
+  .btn-grid{
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
 }
 
 
