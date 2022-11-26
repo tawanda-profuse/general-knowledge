@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/design/styles.css" />
-    <link rel="stylesheet" href="/design/menu.css" />
+    <link rel="stylesheet" href="./design/styles.css" />
+    <link rel="stylesheet" href="./design/menu.css" />
     <title>Quiz About Food</title>
         <!-- Global site tag (gtag.js) - Google Analytics: -->
         <script
@@ -24,7 +24,7 @@
   </head>
   <body>
     <input type="checkbox" id="check" name="" value="" />
-    <label for="check">
+    <label for="check" title="Open/close menu">
       <span id="btn"><img src="./assets/menu_white_48dp.svg" alt="" /></span>
       <span id="cancel"
         ><img src="./assets/close_white_24dp.svg" alt=""
@@ -112,6 +112,9 @@
           <button class="btn">Answer 3</button>
           <button class="btn">Answer 4</button>
         </div>
+        <div class="result" id="score">
+          <h4>Your score:</h4>
+        </div>
       </div>
       <div class="controls">
         <button id="start-btn" class="start-btn btn">Start</button>
@@ -130,6 +133,6 @@
         </p>
       </footer>
     </div>
-    <script src="/backend/script.js"></script>
+    <script src="./backend/script.js"></script>
   </body>
 </html>
