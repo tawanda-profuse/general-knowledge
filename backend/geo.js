@@ -81,7 +81,7 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: 'What is the capital of Chile?',
-    questionimage: '/assets/geo_pics/chile.png',
+    questionimage: '../assets/geo_pics/chile.png',
     answers: [
       { text: 'Harare', correct: false },
       { text: 'Santiago', correct: true },
@@ -91,7 +91,7 @@ const questions = [
   },
   {
     question: 'What is the highest mountain in Britain?',
-    questionimage: '/assets/geo_pics/ben_navis.jpg',
+    questionimage: '../assets/geo_pics/ben_navis.jpg',
     answers: [
       { text: 'Everest', correct: false },
       { text: 'Kilimanjaro', correct: false },
@@ -101,7 +101,7 @@ const questions = [
   },
   {
     question: 'What is the smallest country in the world?',
-    questionimage: '/assets/geo_pics/small.jpg',
+    questionimage: '../assets/geo_pics/small.jpg',
     answers: [
       { text: 'China', correct: false },
       { text: 'South Africa', correct: false },
@@ -111,7 +111,7 @@ const questions = [
   },
   {
     question: 'Alberta is a province of which country?',
-    questionimage: '/assets/geo_pics/alberta.jpg',
+    questionimage: '../assets/geo_pics/alberta.jpg',
     answers: [
       { text: 'Canada', correct: true },
       { text: 'Malawi', correct: false },
@@ -121,7 +121,7 @@ const questions = [
   },
   {
     question: 'How many countries still have the shilling as currency?',
-    questionimage: '/assets/geo_pics/shilling.png',
+    questionimage: '../assets/geo_pics/shilling.png',
     answers: [
       { text: 'All countries in the EU', correct: false },
       { text: 'Two – USA, China', correct: false },
@@ -131,7 +131,7 @@ const questions = [
   },
   {
     question: 'Which is the only vowel not used as the first letter in a US State?',
-    questionimage: '/assets/geo_pics/vowels.png',
+    questionimage: '../assets/geo_pics/vowels.png',
     answers: [
       { text: 'A', correct: false },
       { text: 'O', correct: false },
@@ -141,7 +141,7 @@ const questions = [
   },
   {
     question: 'What is the largest country in the world?',
-    questionimage: '/assets/geo_pics/large.png',
+    questionimage: '../assets/geo_pics/large.png',
     answers: [
       { text: 'Russia', correct: true },
       { text: 'Australia', correct: false },
@@ -151,7 +151,7 @@ const questions = [
   },
   {
     question: 'Where would you find the River Thames?',
-    questionimage: '/assets/geo_pics/thames.jpg',
+    questionimage: '../assets/geo_pics/thames.jpg',
     answers: [
       { text: 'Dublin, Ireland', correct: false },
       { text: 'London, UK', correct: true },
@@ -161,7 +161,7 @@ const questions = [
   },
   {
     question: 'What is the hottest continent on Earth?',
-    questionimage: '/assets/geo_pics/hot-weather.jpg',
+    questionimage: '../assets/geo_pics/hot-weather.jpg',
     answers: [
       { text: 'North America', correct: false },
       { text: 'Asia', correct: false },
@@ -171,7 +171,7 @@ const questions = [
   },
   {
     question: 'What is the longest river in the world?',
-    questionimage: '/assets/geo_pics/nile.jpg',
+    questionimage: '../assets/geo_pics/nile.jpg',
     answers: [
       { text: 'Zambezi River', correct: false },
       { text: 'Congo River', correct: false },

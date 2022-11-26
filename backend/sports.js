@@ -81,7 +81,7 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: 'What are the five colours of the Olympic rings?',
-    questionimage: '/assets/sports_pics/olympic.png',
+    questionimage: '../assets/sports_pics/olympic.png',
     answers: [
       { text: 'Red, green, blue, white and silver', correct: false },
       { text: 'Blue, yellow, black, green and red', correct: true },
@@ -91,7 +91,7 @@ const questions = [
   },
   {
     question: 'In football, which team has won the Champions League (formerly the European Cup) the most?',
-    questionimage: '/assets/sports_pics/champions-league.jpg',
+    questionimage: '../assets/sports_pics/champions-league.jpg',
     answers: [
       { text: 'Everton', correct: false },
       { text: 'Bayern Munich', correct: false },
@@ -101,7 +101,7 @@ const questions = [
   },
   {
     question: 'How many players are there in a rugby league team?',
-    questionimage: '/assets/sports_pics/rugby-league.jpg',
+    questionimage: '../assets/sports_pics/rugby-league.jpg',
     answers: [
       { text: '5', correct: false },
       { text: '20', correct: false },
@@ -111,7 +111,7 @@ const questions = [
   },
   {
     question: 'Which horse is the only three-time winner of the Grand National?',
-    questionimage: '/assets/sports_pics/red-rum.jpg',
+    questionimage: '../assets/sports_pics/red-rum.jpg',
     answers: [
       { text: 'Red Rum', correct: true },
       { text: 'Dug the Pug', correct: false },
@@ -121,7 +121,7 @@ const questions = [
   },
   {
     question: 'Since 1977, where has the snooker World Championship taken place?',
-    questionimage: '/assets/sports_pics/snooker.png',
+    questionimage: '../assets/sports_pics/snooker.png',
     answers: [
       { text: 'Santiago Bernabeu', correct: false },
       { text: 'Old Trafford', correct: false },
@@ -131,7 +131,7 @@ const questions = [
   },
   {
     question: `In tennis, what piece of fruit is found at the top of the men's Wimbledon trophy?`,
-    questionimage: '/assets/sports_pics/wimbledon.jpg',
+    questionimage: '../assets/sports_pics/wimbledon.jpg',
     answers: [
       { text: 'Watermelon', correct: false },
       { text: 'Tomato', correct: false },
@@ -141,7 +141,7 @@ const questions = [
   },
   {
     question: `Who won the FIFA Women's World Cup in 2019?`,
-    questionimage: '/assets/sports_pics/womens-world-cup-2019.png',
+    questionimage: '../assets/sports_pics/womens-world-cup-2019.png',
     answers: [
       { text: 'USA', correct: true },
       { text: 'Australia', correct: false },
@@ -151,7 +151,7 @@ const questions = [
   },
   {
     question: 'In bowling, what is the term given for three consecutive strikes?',
-    questionimage: '/assets/sports_pics/turkey-bowling.jpg',
+    questionimage: '../assets/sports_pics/turkey-bowling.jpg',
     answers: [
       { text: 'A broken leg', correct: false },
       { text: 'A turkey', correct: true },
@@ -161,7 +161,7 @@ const questions = [
   },
   {
     question: 'How many world titles has Phil Talyor won in darts?',
-    questionimage: '/assets/sports_pics/phil-taylor-darts.jpg',
+    questionimage: '../assets/sports_pics/phil-taylor-darts.jpg',
     answers: [
       { text: '2000', correct: false },
       { text: '10', correct: false },
@@ -171,7 +171,7 @@ const questions = [
   },
   {
     question: 'In golf, where does the Masters take place?',
-    questionimage: '/assets/sports_pics/golf.jpg',
+    questionimage: '../assets/sports_pics/golf.jpg',
     answers: [
       { text: 'Trump International Golf Club', correct: false },
       { text: 'Royal Harare Golf Club', correct: false },
@@ -181,7 +181,7 @@ const questions = [
   },
   {
     question: 'Which basketball player has the most NBA championships in total?',
-    questionimage: '/assets/sports_pics/m-jordan.jpg',
+    questionimage: '../assets/sports_pics/m-jordan.jpg',
     answers: [
       { text: 'Carmelo Anthony (0)', correct: false },
       { text: 'Kobe Bryant (5)', correct: false },

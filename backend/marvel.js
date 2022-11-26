@@ -81,7 +81,7 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: 'What is the name of Thor’s hammer?',
-    questionimage: '/assets/marvel_pics/thor_hammer.jpg',
+    questionimage: '../assets/marvel_pics/thor_hammer.jpg',
     answers: [
       { text: 'Vanir', correct: false },
       { text: 'Mjolnir', correct: true },
@@ -91,7 +91,7 @@ const questions = [
   },
   { 
     question: 'Which Avengers character was trained in the Red Room from childhood?',
-    questionimage: '/assets/marvel_pics/red_room.jpg',
+    questionimage: '../assets/marvel_pics/red_room.jpg',
     answers: [
       { text: 'Wonder Woman', correct: false },
       { text: 'Black Widow', correct: true },
@@ -101,7 +101,7 @@ const questions = [
   },
   {
     question: "What metal are Wolverine claws coated with?",
-    questionimage: '/assets/marvel_pics/wolverine_claws.jpg',
+    questionimage: '../assets/marvel_pics/wolverine_claws.jpg',
     answers: [
       { text: 'Gold', correct: false },
       { text: 'Cobalt', correct: false },
@@ -111,7 +111,7 @@ const questions = [
   },
   {
     question: `Which villain did Spider-Man battle at the end of the 2014 film "The Amazing Spider-Man 2"?`,
-    questionimage: '/assets/marvel_pics/spiderman_2.jpg',
+    questionimage: '../assets/marvel_pics/spiderman_2.jpg',
     answers: [
       { text: 'Rhino', correct: true },
       { text: 'Mac Gargan', correct: false },
@@ -121,7 +121,7 @@ const questions = [
   },
   {
     question: 'In which superhero movie did Chris Hemsworth wield the magical hammer, Mjolnir?',
-    questionimage: '/assets/marvel_pics/hemsworth.jpg',
+    questionimage: '../assets/marvel_pics/hemsworth.jpg',
     answers: [
       { text: 'Batman v Superman: Dawn of Justice', correct: false },
       { text: 'Ant-Man and the Wasp', correct: false },
@@ -131,7 +131,7 @@ const questions = [
   },
   {
     question: `Which hero intercepted the nuclear missile aimed at Manhattan in the 2012 superhero film "The Avengers"?`,
-    questionimage: '/assets/marvel_pics/missile.jpg',
+    questionimage: '../assets/marvel_pics/missile.jpg',
     answers: [
       { text: 'Thor', correct: false },
       { text: 'Superman', correct: false },
@@ -141,7 +141,7 @@ const questions = [
   },
   {
     question: `Who plays Captain America in "Captain America: The First Avenger"?`,
-    questionimage: '/assets/marvel_pics/chris-evans.jpg',
+    questionimage: '../assets/marvel_pics/chris-evans.jpg',
     answers: [
       { text: 'Chris Evans', correct: true },
       { text: 'Sebastian Stan', correct: false },
@@ -151,7 +151,7 @@ const questions = [
   },
   {
     question: `In the series, "Marvel's Daredevil", what is the profession of the main character, Matt Murdock?`,
-    questionimage: '/assets/marvel_pics/lawyer.jpg',
+    questionimage: '../assets/marvel_pics/lawyer.jpg',
     answers: [
       { text: 'Mechanic', correct: false },
       { text: 'Lawyer', correct: true },
@@ -161,7 +161,7 @@ const questions = [
   },
   {
     question: 'Finish this action movie title, "Avengers: Age of _____".',
-    questionimage: '/assets/marvel_pics/ultron.jpg',
+    questionimage: '../assets/marvel_pics/ultron.jpg',
     answers: [
       { text: 'Civilization', correct: false },
       { text: 'War', correct: false },
@@ -171,7 +171,7 @@ const questions = [
   },
   {
     question: 'What is the name of the army that Magneto forms in "X-Men: The Last Stand"?',
-    questionimage: '/assets/marvel_pics/brotherhood.jpg',
+    questionimage: '../assets/marvel_pics/brotherhood.jpg',
     answers: [
       { text: 'The Invincibles', correct: false },
       { text: 'Juggernauts', correct: false },

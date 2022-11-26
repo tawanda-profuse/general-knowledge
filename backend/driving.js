@@ -81,7 +81,7 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: 'Which car goes first? Followed by which car?',
-    questionimage: '/assets/driving_pics/diagram_3.png',
+    questionimage: '../assets/driving_pics/diagram_3.png',
     answers: [
       { text: 'Car A, Car B', correct: false },
       { text: 'Car B, Car C', correct: false },
@@ -91,7 +91,7 @@ const questions = [
   },
   {
     question: 'How long is a certificate of competence valid for?',
-    questionimage: '/assets/driving_pics/certificate.jfif',
+    questionimage: '../assets/driving_pics/certificate.jfif',
     answers: [
       { text: '5 years', correct: false },
       { text: '2.5 years', correct: false },
@@ -101,7 +101,7 @@ const questions = [
   },
   { 
     question: 'This sign regulates that...',
-    questionimage: '/assets/driving_pics/speedlimit.png',
+    questionimage: '../assets/driving_pics/speedlimit.png',
     answers: [
       { text: 'The speed limit on this road is entirely up to the driver', correct: false },
       { text: 'The speed limit on this road is 60km/h or 80km/h', correct: false },
@@ -111,7 +111,7 @@ const questions = [
   },
   {
     question: "When approaching this sign I should...",
-    questionimage: '/assets/driving_pics/car-check.jpg',
+    questionimage: '../assets/driving_pics/car-check.jpg',
     answers: [
       { text: 'Be expected to check my vehicle', correct: false },
       { text: 'Expect to see the road works ahead', correct: false },
@@ -121,7 +121,7 @@ const questions = [
   },
   {
     question: `This sign regulates that...`,
-    questionimage: '/assets/driving_pics/bicycle.png',
+    questionimage: '../assets/driving_pics/bicycle.png',
     answers: [
       { text: 'Cyclists should stop and give way to cross traffic', correct: true },
       { text: 'Stop and give way to cyclists from the right', correct: false },
@@ -131,7 +131,7 @@ const questions = [
   },
   {
     question: `Which car goes last?`,
-    questionimage: '/assets/driving_pics/diagram_2.png',
+    questionimage: '../assets/driving_pics/diagram_2.png',
     answers: [
       { text: 'Car A and Car C', correct: false },
       { text: 'Car C', correct: false },
@@ -141,7 +141,7 @@ const questions = [
   },
   {
     question: 'What does this sign mean?',
-    questionimage: '/assets/driving_pics/about-turn.png',
+    questionimage: '../assets/driving_pics/about-turn.png',
     answers: [
       { text: 'Warning of a mountain along the way', correct: false },
       { text: 'This is a one way road', correct: false },
@@ -151,7 +151,7 @@ const questions = [
   },
   {
     question: `What is the correct sequence of a robot/traffic light?`,
-    questionimage: '/assets/driving_pics/traffic_light.png',
+    questionimage: '../assets/driving_pics/traffic_light.png',
     answers: [
       { text: 'Green, green, red', correct: false },
       { text: 'Red, green, amber', correct: true },
@@ -161,7 +161,7 @@ const questions = [
   },
   {
     question: `What does this road sign mean?`,
-    questionimage: '/assets/driving_pics/roadworks.png',
+    questionimage: '../assets/driving_pics/roadworks.png',
     answers: [
       { text: 'Warning to slow down because of road works ahead', correct: true },
       { text: 'There is a child playing in the road', correct: false },
@@ -171,7 +171,7 @@ const questions = [
   },
   {
     question: `What do you do when seeing this sign?`,
-    questionimage: '/assets/driving_pics/slippery.jpg',
+    questionimage: '../assets/driving_pics/slippery.jpg',
     answers: [
       { text: 'Put your car in neutral', correct: false },
       { text: 'Stay off the road', correct: false },
@@ -181,7 +181,7 @@ const questions = [
   },
   {
     question: 'What does this road sign warn the driver of?',
-    questionimage: '/assets/driving_pics/narrow.jpg',
+    questionimage: '../assets/driving_pics/narrow.jpg',
     answers: [
       { text: 'This is not a warning sign, but a regulatory sign', correct: false },
       { text: 'Warning that the road narrows to the right ahead', correct: false },
@@ -191,7 +191,7 @@ const questions = [
   },
   {
     question: 'What does this road sign warn the driver of?',
-    questionimage: '/assets/driving_pics/narrowR.png',
+    questionimage: '../assets/driving_pics/narrowR.png',
     answers: [
       { text: 'This is not a warning sign, but a regulatory sign', correct: false },
       { text: 'Warning that the road narrows to the right ahead', correct: true },
@@ -201,7 +201,7 @@ const questions = [
   },
   {
     question: 'Which car should go last? Which car has the right of way?',
-    questionimage: '/assets/driving_pics/diagram_1.png',
+    questionimage: '../assets/driving_pics/diagram_1.png',
     answers: [
       { text: 'Car A, Car C', correct: false },
       { text: 'Car C, Car B', correct: true },

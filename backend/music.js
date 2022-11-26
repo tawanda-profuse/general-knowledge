@@ -81,7 +81,7 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: 'Who sang with the Wailers?',
-    questionimage: '/assets/music_pics/colors.jpg',
+    questionimage: '../assets/music_pics/colors.jpg',
     answers: [
       { text: 'Michael Jackson', correct: false },
       { text: 'Bob Marley', correct: true },
@@ -91,7 +91,7 @@ const questions = [
   },
   {
     question: 'Which Drake song broke records in 2016?',
-    questionimage: '/assets/music_pics/views.jpg',
+    questionimage: '../assets/music_pics/views.jpg',
     answers: [
       { text: 'Views', correct: false },
       { text: 'One Dance', correct: true },
@@ -101,7 +101,7 @@ const questions = [
   },
   {
     question: "Beyonce rose to stardom as part of which girl band?",
-    questionimage: '/assets/music_pics/destiny-child.jpg',
+    questionimage: '../assets/music_pics/destiny-child.jpg',
     answers: [
       { text: 'The Shirelles', correct: false },
       { text: 'The Bangles', correct: false },
@@ -111,7 +111,7 @@ const questions = [
   },
   {
     question: "Stormzy collaborated with Burna Boy and which other British musician on ‘Own It’?",
-    questionimage: '/assets/music_pics/stormzy.jpeg',
+    questionimage: '../assets/music_pics/stormzy.jpeg',
     answers: [
       { text: 'Ed Sheeran', correct: true },
       { text: 'Justin Beiber', correct: false },
@@ -121,7 +121,7 @@ const questions = [
   },
   {
     question: 'In which video did Michael Jackson first perform his famous moonwalk in 1983?',
-    questionimage: '/assets/music_pics/moon-walk.gif',
+    questionimage: '../assets/music_pics/moon-walk.gif',
     answers: [
       { text: 'Hey Jude', correct: false },
       { text: 'Juicy', correct: false },
@@ -131,7 +131,7 @@ const questions = [
   },
   {
     question: `Will.i.am is best known for being part of which hip hop group?`,
-    questionimage: '/assets/music_pics/will-i-am.jpg',
+    questionimage: '../assets/music_pics/will-i-am.jpg',
     answers: [
       { text: 'YMCMB', correct: false },
       { text: 'NWA', correct: false },
@@ -141,7 +141,7 @@ const questions = [
   },
   {
     question: `Who is the only singer to have ever performed more than one James Bond theme song?`,
-    questionimage: '/assets/music_pics/james-bond.png',
+    questionimage: '../assets/music_pics/james-bond.png',
     answers: [
       { text: 'Shirley Bassey', correct: true },
       { text: 'Tom Jones', correct: false },
@@ -151,7 +151,7 @@ const questions = [
   },
   {
     question: 'What was Britney Spears’ first single called?',
-    questionimage: '/assets/music_pics/britneyspears.jpg',
+    questionimage: '../assets/music_pics/britneyspears.jpg',
     answers: [
       { text: 'Best I Ever Had', correct: false },
       { text: 'Baby One More Time', correct: true },
@@ -161,7 +161,7 @@ const questions = [
   },
   {
     question: 'Which singer has the most UK Number One singles ever',
-    questionimage: '/assets/music_pics/charts.jpg',
+    questionimage: '../assets/music_pics/charts.jpg',
     answers: [
       { text: 'Bob Dylan', correct: false },
       { text: 'Marvin Gaye', correct: false },
@@ -171,7 +171,7 @@ const questions = [
   },
   {
     question: 'One Direction is known for being the runners-up in The X Factor in 2010, but who came first?',
-    questionimage: '/assets/music_pics/x_factor.jpg',
+    questionimage: '../assets/music_pics/x_factor.jpg',
     answers: [
       { text: 'Steve Brookstein', correct: false },
       { text: 'Joe McElderry', correct: false },

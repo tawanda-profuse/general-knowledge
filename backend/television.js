@@ -81,7 +81,7 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: 'What is the capital of Westeros in Game of Thrones?',
-    questionimage: '/assets/tv_pics/kings-landing.jpg',
+    questionimage: '../assets/tv_pics/kings-landing.jpg',
     answers: [
       { text: 'Arkham', correct: false },
       { text: 'King’s Landing', correct: true },
@@ -91,7 +91,7 @@ const questions = [
   },
   {
     question: 'Who presented TV quiz Blockbusters between 1983 and 1995?',
-    questionimage: '/assets/tv_pics/bob-holness.jpg',
+    questionimage: '../assets/tv_pics/bob-holness.jpg',
     answers: [
       { text: 'Andy Gray', correct: false },
       { text: 'Bob Holness', correct: true },
@@ -101,7 +101,7 @@ const questions = [
   },
   {
     question: "In Netflix's Tiger King, what is the name of Carole Baskin's second husband who many believe she fed to the tigers?",
-    questionimage: '/assets/tv_pics/don-lewis.jpg',
+    questionimage: '../assets/tv_pics/don-lewis.jpg',
     answers: [
       { text: 'Idris Elba', correct: false },
       { text: 'Lewis Hamilton', correct: false },
@@ -111,7 +111,7 @@ const questions = [
   },
   {
     question: "In Emmerdale, on New Year's Day in 2004, who died when The Woolpack pub's chimney came crashing down in a storm?",
-    questionimage: '/assets/tv_pics/woolpack.jpg',
+    questionimage: '../assets/tv_pics/woolpack.jpg',
     answers: [
       { text: 'Trisha Dingle', correct: true },
       { text: 'Sharlotte Flair', correct: false },
@@ -121,7 +121,7 @@ const questions = [
   },
   {
     question: 'In what Netflix series does actress Gillian Anderson play a sex therapist?',
-    questionimage: '/assets/tv_pics/netflix-series.jpg',
+    questionimage: '../assets/tv_pics/netflix-series.jpg',
     answers: [
       { text: 'Blood and Waters', correct: false },
       { text: 'The Bold Type', correct: false },
@@ -131,7 +131,7 @@ const questions = [
   },
   {
     question: `Who played Queen Elizabeth II in the first two seasons of The Crown?`,
-    questionimage: '/assets/tv_pics/claire-foy.jpg',
+    questionimage: '../assets/tv_pics/claire-foy.jpg',
     answers: [
       { text: 'Elza Gonzalez', correct: false },
       { text: 'Rebecca Ferguson', correct: false },
@@ -141,7 +141,7 @@ const questions = [
   },
   {
     question: `BBC Three series Normal People is based on a book but who is the author?`,
-    questionimage: '/assets/tv_pics/normal-people-bbc.jpg',
+    questionimage: '../assets/tv_pics/normal-people-bbc.jpg',
     answers: [
       { text: 'Sally Rooney', correct: true },
       { text: 'Paul Mescal', correct: false },
@@ -151,7 +151,7 @@ const questions = [
   },
   {
     question: 'The six main stars of Friends appeared in all 236 episodes. Who is the next most regular character to appear in the show?',
-    questionimage: '/assets/tv_pics/friends-tvshow.jpg',
+    questionimage: '../assets/tv_pics/friends-tvshow.jpg',
     answers: [
       { text: 'Ted (120 episodes)', correct: false },
       { text: 'Gunther (151 episodes)', correct: true },
@@ -161,7 +161,7 @@ const questions = [
   },
   {
     question: 'Who does the voiceover on Love Island?',
-    questionimage: '/assets/tv_pics/iain-stirling.jpg',
+    questionimage: '../assets/tv_pics/iain-stirling.jpg',
     answers: [
       { text: 'Bill Burr', correct: false },
       { text: 'Dave Chappelle', correct: false },
@@ -171,7 +171,7 @@ const questions = [
   },
   {
     question: 'In what year was the first episode of Coronation Street broadcasted on ITV?',
-    questionimage: '/assets/tv_pics/coronation_street.jpg',
+    questionimage: '../assets/tv_pics/coronation_street.jpg',
     answers: [
       { text: '1800', correct: false },
       { text: '2006', correct: false },
