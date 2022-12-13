@@ -6,7 +6,7 @@ const answerButtonsElement = document.getElementById("answer-buttons"); // The o
 const questionImageElement = document.getElementById("questionimage"); // Image that describes the question
 const resultElement = document.getElementById("score"); // Display score to the user
 
-let shuffledQuestions, currentQuestionIndex, answerScore;
+let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
@@ -27,20 +27,6 @@ function startGame() {
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
-  // trackAnswer(shuffledQuestions[currentQuestionIndex]);
-}
-
-// Gives the user a score
-function trackAnswer(question) {
-
-  question.answers.forEach((answer) => {
-    if (answer.correct) {
-      answerScore ++;
-    } 
-    console.log(`current score = ${answerScore}`);
-  });
-
-  resultElement.innerText = `Your score: ${answerScore}/${shuffledQuestions.length}`;
 }
 
 function showQuestion(question) {
@@ -75,6 +61,8 @@ function selectAnswer(e) {
   Array.from(answerButtonsElement.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
   });
+
+  resultElement.innerText = `Your score: ${answerScore}/${shuffledQuestions.length}`;
 
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hide");
