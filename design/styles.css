@@ -1,6 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* sidemenu related */
     padding: 0;
     margin: 0;
@@ -13,6 +13,11 @@
     --hue-wrong: 0;
     --hue-correct: 145;
   }
+
+  html{
+    font-size: 16px;
+  }
+
   .sidebar{
     position: fixed;
     left: -250px;
@@ -21,7 +26,7 @@
     background: tomato;
   }
   .sidebar header{
-    font-size: 22px;
+    font-size: 1.25rem;
     color: green;
     line-height: 70px;
     background: black;
@@ -32,7 +37,7 @@
     height: 100%;
     width: 100%;
     line-height: 65px;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: white;
     padding-left: 40px;
     box-sizing: border-box;
@@ -59,7 +64,7 @@
   label #btn{
     left: 40px;
     top: 25px;
-    font-size: 35px;
+    font-size: 2rem;
     color: white;
     padding: 6px 12px;
   }
@@ -67,7 +72,7 @@
     z-index: 1111;
     left: -195px;
     top: 17px;
-    font-size: 30px;
+    font-size: 2rem;
     color: green;
     padding: 4px 9px;
     transition: all .5s ease;
@@ -79,13 +84,8 @@
     --hue: var(--hue-neutral);
     padding: 0;
     margin: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
     background-color: hsl(var(--hue), 100%, 20%);
-    font-size: 30px;
+    font-size: 2rem;
   }
   
   body.correct {
@@ -95,6 +95,7 @@
   body.wrong {
     --hue: var(--hue-wrong);
   }
+
   .container {
     width: 800px;
     max-width: 80%;
@@ -102,6 +103,7 @@
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    margin: 150px auto;
   }
   
   .btn-grid {
@@ -119,7 +121,7 @@
     padding: 5px 10px;
     color: white;
     outline: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     cursor: pointer;
   }
   
@@ -156,8 +158,9 @@
   }
 
 .footer-bottom{
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 0;
   background: tomato;
   height: 5%;
   width: 100%;
@@ -166,10 +169,9 @@
   padding-bottom: 5px;
   color: white;
   text-align: center;
-  display: block;
 }
 .footer-bottom p{
-  font-size: 20px;
+  font-size: 1.25rem;
   word-spacing: 2px;
   text-transform: capitalize;
 }
@@ -188,11 +190,9 @@
   .container{
     width: 90%;
     max-width: 90%;
-    padding-top: 80%;
-    padding-bottom: 50%;
   }
   #question{
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .question-picture img{
     width: 100%;
@@ -201,7 +201,7 @@
     position: fixed;
   }
   .footer-bottom p{
-    font-size: 16px;
+    font-size: 1rem;
   }
   .btn-grid{
     display: grid;
@@ -210,7 +210,7 @@
     margin: 20px 0;
   }
   button.btn{
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 

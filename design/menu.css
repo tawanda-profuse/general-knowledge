@@ -5,6 +5,11 @@
   list-style: none;
   text-decoration: none;
 }
+
+html{
+  font-size: 16px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -15,9 +20,10 @@ body {
   height: 100%;
   background: tomato;
   transition: all .5s ease;
+  overflow: scroll;
 }
 .sidebar header {
-  font-size: 22px;
+  font-size: 1.25rem;
   color: white;
   line-height: 70px;
   text-align: center;
@@ -29,7 +35,7 @@ body {
   height: 100%;
   width: 100%;
   line-height: 65px;
-  font-size: 20px;
+  font-size: 1rem;
   color: white;
   padding-left: 40px;
   box-sizing: border-box;
@@ -59,20 +65,28 @@ label #btn,label #cancel{
 label #btn{
   left: 40px;
   top: 25px;
-  font-size: 35px;
+  font-size: 2rem;
   color: white;
   padding: 6px 12px;
   transition: all .5s;
+  box-shadow: 2px 2px 2px 2px black;
 }
 label #cancel{
   z-index: 1111;
   left: -195px;
   top: 17px;
-  font-size: 30px;
+  font-size: 2rem;
   color:green;
-  padding: 4px 9px;
+  padding: 6px 12px;
   transition: all .5s ease;
+  box-shadow: 2px 2px 2px 2px black;
 }
+
+label #btn:hover, label #cancel:hover, label #cancel:active, label #btn:active{
+  transform: scale(0.9);
+  box-shadow: 0px 0px 0px 0px black;
+}
+
 #check:checked ~ .sidebar{
   left: 0;
 }
