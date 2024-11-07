@@ -86,14 +86,14 @@ const Sidebar = () => {
                   window.location.href.includes(category.category) ? "active" : ""
                 }`}
               >
-                <Link
+                <a
                   key={index}
-                  to={`/quiz/${category.category}`}
+                  href={`/quiz/${category.category}`}
                   className="flex justify-center text-[1.25rem] text-[white] text-center w-full py-[1rem] border-t-[1px] border-b-[1px] border-b-[black] border-solid border-[#ffffff1a] duration-[.4s] hover:-translate-x-[5%]"
                   onClick={() => setSideMenu(false)}
                 >
                   {category.category}
-                </Link>
+                </a>
               </li>
             ))}
         </ul>
