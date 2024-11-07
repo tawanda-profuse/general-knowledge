@@ -22,6 +22,7 @@ const Quiz = () => {
       await axios
         .get(`${apiUrl}/${category}`)
         .then((response) => {
+          document.title = `General Knowledge - ${response.data.questions[0].category} Quiz`;
           setQuestions(response.data.questions);
         })
         .catch((error) => {
