@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
@@ -59,7 +59,7 @@ const Quiz = () => {
     runTimer();
   };
 
-  const selectAnswer = (correct, questionLength) => {
+  const selectAnswer = useCallback((correct, questionLength) => {
     setNextQuestion();
     setTimer(15);
     if (correct) {
@@ -69,26 +69,14 @@ const Quiz = () => {
     if (currentQuestionIndex === questionLength - 1) {
       setDisplayResult(true);
     }
-  };
+  }, [currentQuestionIndex]);
 
   useEffect(() => {
-    const selectAnswer = (correct, questionLength) => {
-      setNextQuestion();
-      setTimer(15);
-      if (correct) {
-        setAnswerScore((prev) => prev + 1);
-      }
-
-      if (currentQuestionIndex === questionLength - 1) {
-        setDisplayResult(true);
-      }
-    };
-
     if (timer < 0) {
       selectAnswer(false, questions[0].quiz.length);
       setTimer(15);
     }
-  }, [questions, timer, currentQuestionIndex]);
+  }, [questions, timer, currentQuestionIndex, selectAnswer]);
 
   return (
     <>
@@ -196,17 +184,25 @@ const Quiz = () => {
                       Retry
                     </button>
                     <table className="w-[90%] md:w-3/4">
-                      <caption className="font-bold text-[purple] mb-[1rem]">How well did you do?</caption>
+                      <caption className="font-bold text-[purple] mb-[1rem]">
+                        How well did you do?
+                      </caption>
                       <thead>
                         <tr>
-                          <th className="border border-[black] p-[0.1rem]">Question</th>
-                          <th className="border border-[black] p-[0.1rem]">Answer</th>
+                          <th className="border border-[black] p-[0.1rem]">
+                            Question
+                          </th>
+                          <th className="border border-[black] p-[0.1rem]">
+                            Answer
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
                         {questions[0]?.quiz?.map((item, index) => (
                           <tr key={index}>
-                            <td className="border border-[black] p-[0.1rem]">{item.question}</td>
+                            <td className="border border-[black] p-[0.1rem]">
+                              {item.question}
+                            </td>
                             <td className="border border-[black] p-[0.1rem]">
                               {
                                 item.answers.find((answer) => answer.correct)
