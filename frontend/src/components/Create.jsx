@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const Create = () => {
   const apiUrl = window.location.origin.includes("localhost")
     ? "http://localhost:8000"
-    : "";
+    : "https://general-knowledge-eta.vercel.app";
   // States for the quiz category and category photo
   const [category, setCategory] = useState("");
   // State for holding multiple questions

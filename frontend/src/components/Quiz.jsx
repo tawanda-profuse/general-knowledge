@@ -7,7 +7,7 @@ const Quiz = () => {
   const { category } = useParams();
   const apiUrl = window.location.origin.includes("localhost")
     ? "http://localhost:8000"
-    : "";
+    : "https://general-knowledge-eta.vercel.app";
   const [gameStarted, setGameStarted] = useState(false);
   const [displayResult, setDisplayResult] = useState(true);
   const [questions, setQuestions] = useState([]);
@@ -22,7 +22,7 @@ const Quiz = () => {
       await axios
         .get(`${apiUrl}/${category}`)
         .then((response) => {
-          document.title = `General Knowledge - ${response.data.questions[0].category} Quiz`;
+          document.title = `QuizVibe - ${response.data.questions[0].category} Quiz`;
           setQuestions(response.data.questions);
         })
         .catch((error) => {

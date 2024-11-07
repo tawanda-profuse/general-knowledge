@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 const Sidebar = () => {
   const apiUrl = window.location.origin.includes("localhost")
     ? "http://localhost:8000"
-    : "";
+    : "https://general-knowledge-eta.vercel.app";
   const [sideMenu, setSideMenu] = useState(false);
   const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
