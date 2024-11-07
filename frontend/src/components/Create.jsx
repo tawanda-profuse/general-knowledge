@@ -1,14 +1,13 @@
 import { useState } from "react";
 import Sidebar from "./Sidebar";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Create = () => {
   const apiUrl = window.location.origin.includes("localhost")
     ? "http://localhost:8000"
     : "";
-  const navigate = useNavigate();
   // States for the quiz category and category photo
   const [category, setCategory] = useState("");
   // State for holding multiple questions
@@ -21,7 +20,7 @@ const Create = () => {
   // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setIsPending(true);
+    setIsPending(true);
 
     if (!category) {
       toast.warn("Please enter a quiz category");
