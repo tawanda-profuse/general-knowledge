@@ -71,7 +71,9 @@ app.post("/quiz", async (req, res, next) => {
     });
   } catch (error) {
     console.error("An error has occurred", error);
-    return res.status(500).send({ message: "An error has occurred while saving the quiz" });
+    return res
+      .status(500)
+      .send({ message: "An error has occurred while saving the quiz" });
   }
 });
 

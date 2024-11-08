@@ -141,14 +141,12 @@ const Create = () => {
 
           <button
             type="submit"
-            className="bg-[#440066] p-[0.5rem] text-[1rem] text-[white] rounded-md hover:opacity-80"
+            className={`bg-[#440066] ${
+              isPending ? "animate-pulse" : ""
+            } p-[0.5rem] text-[1rem] text-[white] rounded-md hover:opacity-80`}
             disabled={isPending}
           >
-            {isPending ? (
-              <i className="fas fa-spinner animate-spin"></i>
-            ) : (
-              "Submit"
-            )}
+            {isPending ? "Loading..." : "Submit"}
           </button>
         </form>
       )}

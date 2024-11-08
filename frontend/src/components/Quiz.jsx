@@ -59,17 +59,20 @@ const Quiz = () => {
     runTimer();
   };
 
-  const selectAnswer = useCallback((correct, questionLength) => {
-    setNextQuestion();
-    setTimer(15);
-    if (correct) {
-      setAnswerScore((prev) => prev + 1);
-    }
+  const selectAnswer = useCallback(
+    (correct, questionLength) => {
+      setNextQuestion();
+      setTimer(15);
+      if (correct) {
+        setAnswerScore((prev) => prev + 1);
+      }
 
-    if (currentQuestionIndex === questionLength - 1) {
-      setDisplayResult(true);
-    }
-  }, [currentQuestionIndex]);
+      if (currentQuestionIndex === questionLength - 1) {
+        setDisplayResult(true);
+      }
+    },
+    [currentQuestionIndex]
+  );
 
   useEffect(() => {
     if (timer < 0) {
@@ -87,7 +90,7 @@ const Quiz = () => {
         <div className="absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 w-[90%] max-w-[90%] md:w-[800px] md:max-w-[80%] bg-[white] rounded-[5px] p-[10px] shadow-md min-h-[50vh] max-h-[80vh] overflow-auto">
           {gameStarted && (
             <>
-              <div
+              {/* <div
                 className={`absolute top-2 ${
                   currentQuestionIndex >= questions[0].quiz.length
                     ? "left-2/4 -translate-x-2/4"
@@ -101,13 +104,13 @@ const Quiz = () => {
                     ? `/${questions[0].quiz.length}`
                     : ""
                 }`}</h4>
-              </div>
+              </div> */}
               <div>
                 {questions[0].quiz.length > 0 && (
                   <>
                     {currentQuestionIndex < questions[0].quiz.length && (
                       <>
-                        <div className="flex items-center gap-[2rem] mb-[1rem]">
+                        <div className="flex flex-col md:flex-row items-center justify-between my-[1rem] px-[1rem] gap-[1rem]">
                           <h3 className="font-bold text-lg">
                             Question {currentQuestionIndex + 1} of{" "}
                             {questions[0].quiz.length}
@@ -131,6 +134,17 @@ const Quiz = () => {
                               Next
                             </button>
                           )}
+                          <div
+                            className={` bg-[yellow] text-[black] py-[0.5rem] px-[1rem] rounded-md ${
+                              displayResult ? "block" : "hidden"
+                            }`}
+                          >
+                            <h4>{`Your score: ${answerScore}${
+                              currentQuestionIndex >= questions[0].quiz.length
+                                ? `/${questions[0].quiz.length}`
+                                : ""
+                            }`}</h4>
+                          </div>
                         </div>
                         <div>
                           <h1>
@@ -220,10 +234,10 @@ const Quiz = () => {
           )}
           {!gameStarted && (
             <div className="flex flex-col items-center gap-[1rem] my-[2rem]">
-              <h1 className="text-[#440066] font-bold text-[3rem] underline text-balance">
+              <h1 className="text-[#440066] font-bold text-[3rem] underline text-center md:text-balance">
                 {questions[0]?.category} Quiz
               </h1>
-              <p className="text-balance my-[1rem] font-mono">
+              <p className="text-center md:text-balance my-[1rem] font-mono">
                 You've got 15 seconds per question. Press{" "}
                 <q>
                   <span className="font-bold">start</span>
