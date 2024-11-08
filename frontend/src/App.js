@@ -12,7 +12,15 @@ function App() {
   return (
     <>
       <Sidebar />
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense
+        fallback={
+          <div className="absolute left-0 top-0 w-screen h-screen text-center z-[200] flex flex-col items-center justify-center bg-[rgba(255,255,255,0.8)]">
+            <p className="animate-bounce text-[10rem] font-serif text-[purple]">
+              ...
+            </p>
+          </div>
+        }
+      >
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/create" element={<Create />} />

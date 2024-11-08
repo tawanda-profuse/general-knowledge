@@ -90,21 +90,6 @@ const Quiz = () => {
         <div className="absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 w-[90%] max-w-[90%] md:w-[800px] md:max-w-[80%] bg-[white] rounded-[5px] p-[10px] shadow-md min-h-[50vh] max-h-[80vh] overflow-auto">
           {gameStarted && (
             <>
-              {/* <div
-                className={`absolute top-2 ${
-                  currentQuestionIndex >= questions[0].quiz.length
-                    ? "left-2/4 -translate-x-2/4"
-                    : "right-2"
-                } bg-[yellow] text-[black] py-[0.5rem] px-[1rem] rounded-md ${
-                  displayResult ? "block" : "hidden"
-                }`}
-              >
-                <h4>{`Your score: ${answerScore}${
-                  currentQuestionIndex >= questions[0].quiz.length
-                    ? `/${questions[0].quiz.length}`
-                    : ""
-                }`}</h4>
-              </div> */}
               <div>
                 {questions[0].quiz.length > 0 && (
                   <>
@@ -191,6 +176,17 @@ const Quiz = () => {
                     <h1 className="text-[#440066] font-bold text-[3rem]">
                       Complete!
                     </h1>
+                    <div
+                      className={` bg-[yellow] text-[black] py-[0.5rem] px-[1rem] rounded-md ${
+                        displayResult ? "block" : "hidden"
+                      }`}
+                    >
+                      <h4>{`Your score: ${answerScore}${
+                        currentQuestionIndex >= questions[0].quiz.length
+                          ? `/${questions[0].quiz.length}`
+                          : ""
+                      }`}</h4>
+                    </div>
                     <button
                       onClick={() => window.location.reload()}
                       className="text-[1.5rem] font-bold py-[10px] px-[20px] cursor-pointer btn"
