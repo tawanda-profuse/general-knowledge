@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -86,6 +86,10 @@ const Create = () => {
     }
   };
 
+  useEffect(() => {
+    console.log(questions.length);
+  }, [questions.length]);
+
   // Function to handle adding a new question
   const addQuestion = () => {
     setQuestions([
@@ -99,6 +103,11 @@ const Create = () => {
     const updatedQuestions = questions.map((q, i) =>
       i === index ? updatedQuestion : q
     );
+    setQuestions(updatedQuestions);
+  };
+
+  const removeQuestion = (index) => {
+    const updatedQuestions = questions.filter((_, i) => index !== i);
     setQuestions(updatedQuestions);
   };
 
@@ -126,6 +135,7 @@ const Create = () => {
               index={index}
               questionData={questionData}
               updateQuestion={updateQuestion}
+              removeQuestion={removeQuestion}
             />
           ))}
 
@@ -199,7 +209,12 @@ const Create = () => {
 };
 
 // Question Component to handle individual question details
-export const Question = ({ index, questionData, updateQuestion }) => {
+export const Question = ({
+  index,
+  questionData,
+  updateQuestion,
+  removeQuestion,
+}) => {
   const { question, picture, answers } = questionData;
 
   // Function to handle updates to the question text
@@ -250,8 +265,18 @@ export const Question = ({ index, questionData, updateQuestion }) => {
 
   return (
     <div className="flex flex-col gap-[1rem] py-[0.5rem] border-b-2 border-black md:border-none">
-      <h3 className="text-[2rem]">Question {index + 1}</h3>
-
+      <div className="flex justify-start gap-[2rem] flex-wrap">
+        <h3 className="text-[2rem]">Question {index + 1}</h3>{" "}
+        {index > 0 && (
+          <button
+            className="px-[1rem] bg-[black] text-white rounded-md transition-all duration-150 hover:scale-[1.1]"
+            type="button"
+            onClick={() => removeQuestion(index)}
+          >
+            Remove Question
+          </button>
+        )}
+      </div>
       {/* Input for the question text */}
       <input
         type="text"
@@ -270,9 +295,11 @@ export const Question = ({ index, questionData, updateQuestion }) => {
       />
       {/* Display and handle multiple choice answers */}
       {answers.map((answer, i) => (
-        <div className="flex items-center justify-between w-full flex-wrap gap-[1rem] md:gap-0 py-[0.5rem]">
+        <div
+          className="flex items-center justify-between w-full flex-wrap gap-[1rem] md:gap-0 py-[0.5rem]"
+          key={i}
+        >
           <input
-            key={i}
             type="text"
             value={answer.text}
             onChange={(e) => handleAnswerChange(i, e.target.value)}
@@ -301,7 +328,7 @@ export const Question = ({ index, questionData, updateQuestion }) => {
             className="w-[2rem] bg-[red] rounded-full transition-all duration-150 hover:scale-[1.1]"
             type="button"
           >
-            <img src={cross} alt=""/>
+            <img src={cross} alt="" />
           </button>
         </div>
       ))}
