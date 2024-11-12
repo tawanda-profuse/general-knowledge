@@ -189,7 +189,7 @@ const Create = () => {
               onClick={() => setSubmitModal(false)}
               className="bg-[tomato] w-full md:w-1/4 p-[0.5rem] text-[1.2rem] rounded-md hover:opacity-80"
             >
-              Cancel
+              Not yet
             </button>
           </div>
         </div>
