@@ -16,10 +16,10 @@ const Create = () => {
   ]);
   const [isPending, setIsPending] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitModal, setSubmitModal] = useState(false);
 
   // Function to handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setIsPending(true);
 
     if (!category) {
@@ -105,10 +105,7 @@ const Create = () => {
     <>
       <Sidebar />
       {!isSubmitted && (
-        <form
-          onSubmit={handleSubmit}
-          className="m-auto w-[90vw] md:w-2/4 bg-[white] rounded-lg p-[1rem] overflow-y-scroll h-[80vh] flex flex-col gap-[2rem] absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
-        >
+        <form className="m-auto w-[90vw] md:w-2/4 bg-[white] rounded-lg p-[1rem] overflow-y-scroll h-[80vh] flex flex-col gap-[2rem] absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
           <h1 className="text-center underline text-[2rem]">Create a Quiz</h1>
 
           {/* Input for Quiz Category */}
@@ -140,7 +137,8 @@ const Create = () => {
           </button>
 
           <button
-            type="submit"
+            type="button"
+            onClick={() => setSubmitModal(true)}
             className={`bg-[#440066] ${
               isPending ? "animate-pulse" : ""
             } p-[0.5rem] text-[1rem] text-[white] rounded-md hover:opacity-80`}
@@ -161,7 +159,7 @@ const Create = () => {
         <p className="text-pretty">
           Your quiz has been submitted successfully! Wait for a short while as
           it is being reviewed after which it will be available from the list of
-          quizzes. Contact Tawanda via{" "}
+          quizzes in the side menu. Contact Tawanda via{" "}
           <a
             href="mailto:tawandamsengezi@gmail.com"
             className="text-[purple] hover:underline italic"
@@ -174,6 +172,27 @@ const Create = () => {
           Okay
         </Link>
       </div>
+      {submitModal && !isSubmitted && (
+        <div className="m-auto w-[90vw] md:w-2/4 bg-[skyblue] rounded-lg p-[1rem] px-[2rem] md:px-0 overflow-y-scroll flex flex-col gap-[2rem] absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
+          <h1 className="text-center underline text-[2rem]">
+            Are you sure you want submit your quiz?
+          </h1>
+          <div className="flex flex-col md:flex-row mt-[4rem] justify-center gap-[1rem]">
+            <button
+              onClick={handleSubmit}
+              className="bg-[lawngreen] w-full md:w-1/4 p-[0.5rem] text-[1.2rem] rounded-md hover:opacity-80"
+            >
+              Yes
+            </button>
+            <button
+              onClick={() => setSubmitModal(false)}
+              className="bg-[tomato] w-full md:w-1/4 p-[0.5rem] text-[1.2rem] rounded-md hover:opacity-80"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
