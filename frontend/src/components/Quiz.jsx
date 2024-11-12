@@ -200,6 +200,9 @@ const Quiz = () => {
                       <thead>
                         <tr>
                           <th className="border border-[black] p-[0.1rem]">
+                            Number
+                          </th>
+                          <th className="border border-[black] p-[0.1rem]">
                             Question
                           </th>
                           <th className="border border-[black] p-[0.1rem]">
@@ -210,10 +213,13 @@ const Quiz = () => {
                       <tbody>
                         {questions[0]?.quiz?.map((item, index) => (
                           <tr key={index}>
+                            <td className="border border-[black] p-[0.1rem] text-center">
+                              {index + 1}
+                            </td>
                             <td className="border border-[black] p-[0.1rem]">
                               {item.question}
                             </td>
-                            <td className="border border-[black] p-[0.1rem]">
+                            <td className="border border-[black] p-[0.1rem] text-center">
                               {
                                 item.answers.find((answer) => answer.correct)
                                   .text
