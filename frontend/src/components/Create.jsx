@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import cross from "../assets/close_white_24dp.svg";
 
 const Create = () => {
   const apiUrl = window.location.origin.includes("localhost")
@@ -248,7 +249,7 @@ export const Question = ({ index, questionData, updateQuestion }) => {
   };
 
   return (
-    <div className="flex flex-col gap-[1rem]">
+    <div className="flex flex-col gap-[1rem] py-[0.5rem] border-b-2 border-black md:border-none">
       <h3 className="text-[2rem]">Question {index + 1}</h3>
 
       {/* Input for the question text */}
@@ -269,14 +270,14 @@ export const Question = ({ index, questionData, updateQuestion }) => {
       />
       {/* Display and handle multiple choice answers */}
       {answers.map((answer, i) => (
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full flex-wrap gap-[1rem] md:gap-0 py-[0.5rem]">
           <input
             key={i}
             type="text"
             value={answer.text}
             onChange={(e) => handleAnswerChange(i, e.target.value)}
             placeholder={`Multiple choice answer ${i + 1}`}
-            className="text-[1.2rem] outline-none rounded-md border-2 border-[black] p-[0.5rem] focus:border-[#440066]"
+            className="text-[1.2rem] outline-none rounded-md border-2 border-[black] p-[0.5rem] focus:border-[#440066] w-full md:w-2/4"
           />
           <div
             className={`flex gap-[1rem] p-[0.5rem] rounded-lg ${
@@ -297,10 +298,10 @@ export const Question = ({ index, questionData, updateQuestion }) => {
           </div>
           <button
             onClick={() => removeAnswer(answer.text)}
-            className="bg-[red]"
+            className="w-[2rem] bg-[red] rounded-full transition-all duration-150 hover:scale-[1.1]"
             type="button"
           >
-            <i className="fas fa-times"></i>
+            <img src={cross} alt=""/>
           </button>
         </div>
       ))}
