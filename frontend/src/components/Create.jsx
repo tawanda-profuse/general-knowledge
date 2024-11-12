@@ -265,7 +265,7 @@ export const Question = ({ index, questionData, updateQuestion }) => {
         type="text"
         value={picture}
         onChange={handlePictureChange}
-        placeholder="Paste an image URL for the question (optional)"
+        placeholder="Paste an image URL for a hint of the answer (optional)"
         className="text-[1.2rem] outline-none rounded-md border-2 border-[black] p-[0.5rem] focus:border-[#440066]"
       />
       {/* Display and handle multiple choice answers */}
