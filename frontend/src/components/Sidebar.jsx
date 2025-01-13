@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import menuBtn from "../assets/menu_white_48dp.svg";
 import closeBtn from "../assets/close_white_24dp.svg";
+import houseBtn from "../assets/house.svg";
 
 const Sidebar = () => {
   const apiUrl = window.location.origin.includes("localhost")
@@ -48,6 +49,16 @@ const Sidebar = () => {
           sideMenu ? "left-0" : "-left-full md:-left-2/4"
         } w-4/5 md:w-1/4 h-screen overflow-y-scroll overflow-x-hidden bg-[tomato]`}
       >
+        <Link
+          className={`absolute cursor-pointer bg-[green] hover:bg-[black] rounded-[3px] text-[1.2rem] text-[white] py-[6px] px-[12px] z-[1111] left-2 ${
+            sideMenu ? "block" : "hidden"
+          } top-[25px] text-[1.2rem] transition-all duration-[.5s]`}
+          onClick={() => setSideMenu(false)}
+          title="Go to home"
+          to="/"
+        >
+          <img src={houseBtn} alt="" />
+        </Link>
         <button
           className={`absolute cursor-pointer bg-[green] hover:bg-[black] rounded-[3px] text-[1.2rem] text-[white] py-[6px] px-[12px] z-[1111] right-2 ${
             sideMenu ? "block" : "hidden"

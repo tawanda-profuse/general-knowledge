@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Quiz = () => {
   const { category } = useParams();
@@ -16,6 +16,7 @@ const Quiz = () => {
   const [answerScore, setAnswerScore] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [timer, setTimer] = useState(15);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,6 +27,7 @@ const Quiz = () => {
           setQuestions(response.data.questions);
         })
         .catch((error) => {
+          navigate("/");
           console.error("Error: ", error);
           toast.error(error.response.data?.message || error.message);
         })
@@ -35,7 +37,7 @@ const Quiz = () => {
     };
 
     fetchData();
-  }, [apiUrl, category]);
+  }, [apiUrl, category, navigate]);
 
   const setNextQuestion = () => {
     setCurrentQuestionIndex((prev) => prev + 1);
