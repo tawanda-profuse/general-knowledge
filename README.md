@@ -13,6 +13,7 @@
 - **Frontend**: React.js, Tailwind CSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
+- **Mobile**: React Native
 
 ## Project Structure
 
