@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     top: "50%",
     left: "50%",
     transform: 'translate(-50%, -50%)',
-    // transform: [{ translateX: -0.5 * 90 + "%" }, { translateY: -0.5 * 80 + "%" }],
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,

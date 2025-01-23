@@ -19,7 +19,7 @@ const Sidebar = () => {
   const [sideMenu, setSideMenu] = useState(false)
   const [categories, setCategories] = useState<{ category: string }[]>([])
   const [isLoading, setIsLoading] = useState(true)
-  const router = useRouter();
+  const router = useRouter()
 
   type CategoryType = {
     category: any
@@ -44,7 +44,7 @@ const Sidebar = () => {
   }, [sideMenu, categories])
 
   const handlePress = (category: string) => {
-    router.push(`/quiz/${category}`);
+    router.replace(`/quiz/${category}`)
   }
 
   return (
@@ -90,20 +90,21 @@ const Sidebar = () => {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.createButton}
-            onPress={() => {
-              setSideMenu(false)
-            }}
-          >
-            <Link href='/create' style={styles.createButtonText}>
-              <Text>Create Quiz</Text>
-            </Link>
-          </TouchableOpacity>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <TouchableOpacity
+              style={styles.createButton}
+              onPress={() => {
+                setSideMenu(false)
+              }}
+            >
+              <Link href='/create' style={styles.createButtonText}>
+                <Text>Create Quiz</Text>
+              </Link>
+            </TouchableOpacity>
 
-          <Text style={styles.heading}>All Quizzes ({categories.length})</Text>
-
-          <ScrollView>
+            <Text style={styles.heading}>
+              All Quizzes ({categories.length})
+            </Text>
             {isLoading ? (
               [1, 2, 3].map((_, index) => (
                 <View key={index} style={styles.loadingItem}></View>
@@ -159,7 +160,8 @@ const styles = StyleSheet.create({
     top: 25,
     padding: 10,
     backgroundColor: 'green',
-    borderRadius: 3
+    borderRadius: 3,
+    zIndex: 1000
   },
   closeButton: {
     position: 'absolute',
@@ -167,7 +169,8 @@ const styles = StyleSheet.create({
     top: 25,
     padding: 10,
     backgroundColor: 'green',
-    borderRadius: 3
+    borderRadius: 3,
+    zIndex: 1000
   },
   createButton: {
     marginTop: 70,
