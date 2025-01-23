@@ -5,10 +5,11 @@ import {
   TouchableOpacity,
   Image,
   StyleSheet,
-  ScrollView
+  ScrollView,
+  Pressable
 } from 'react-native'
 import axios from 'axios'
-import { Link } from 'expo-router'
+import { Link, useRouter } from 'expo-router'
 import Toast from 'react-native-toast-message'
 
 const Sidebar = () => {
@@ -18,6 +19,7 @@ const Sidebar = () => {
   const [sideMenu, setSideMenu] = useState(false)
   const [categories, setCategories] = useState<{ category: string }[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const router = useRouter();
 
   type CategoryType = {
     category: any
@@ -40,6 +42,10 @@ const Sidebar = () => {
 
     fetchCategories()
   }, [sideMenu, categories])
+
+  const handlePress = (category: string) => {
+    router.push(`/quiz/${category}`);
+  }
 
   return (
     <>
@@ -104,21 +110,18 @@ const Sidebar = () => {
               ))
             ) : categories.length > 0 ? (
               categories.map((category: CategoryType, index) => (
-                <TouchableOpacity
+                <Pressable
                   key={index}
                   style={styles.categoryItem}
                   onPress={() => {
                     setSideMenu(false)
+                    handlePress(category.category)
                   }}
                 >
-                  <Link
-                    href='/'
-                    // href={'/quiz/${category.category}'}
-                    style={styles.categoryText}
-                  >
+                  <Text style={styles.categoryText}>
                     <Text>{category.category}</Text>
-                  </Link>
-                </TouchableOpacity>
+                  </Text>
+                </Pressable>
               ))
             ) : (
               <Text style={styles.createButtonText}>No data available...</Text>

@@ -9,6 +9,7 @@ import { Colors } from '@/constants/Colors'
 
 import Sidebar from './sidebar'
 import React from 'react'
+import Footer from './footer'
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
@@ -42,8 +43,10 @@ export default function RootLayout () {
       >
         <Stack.Screen name='index' options={{ title: 'Home' }} />
         <Stack.Screen name='create' options={{ title: 'Create' }} />
+        <Stack.Screen name='quiz/[category]' options={{ title: 'Quiz' }} />
         <Stack.Screen name='+not-found' />
       </Stack>
+      <Footer/>
       <StatusBar style='auto' />
     </>
   )

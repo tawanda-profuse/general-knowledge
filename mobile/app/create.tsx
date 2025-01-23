@@ -10,6 +10,7 @@ import {
   Alert 
 } from "react-native";
 import axios from "axios";
+import Toast from "react-native-toast-message";
 
 interface Answer {
   text: string;
@@ -85,10 +86,10 @@ const create: React.FC = () => {
         category: category,
         quiz: questions,
       });
-      Alert.alert("Success", response.data.message);
+      Toast.show({ type: 'success', text1: response.data.message })
       setIsSubmitted(true);
     } catch (error: any) {
-      Alert.alert("Error", error.response?.data?.message || error.message);
+      Toast.show({ type: 'error', text1: error.response?.data?.message || error.message })
     } finally {
       setIsPending(false);
     }
