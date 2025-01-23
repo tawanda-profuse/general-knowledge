@@ -23,6 +23,7 @@ The project is organized into two main directories:
 - **backend/**: Contains the server-side code using Express.js, along with the MongoDB schema.
     - `server.js`: Main file containing the configuration and setup for the Express server.
     - `/models/quiz.js`: Defines the structure for quiz documents in MongoDB.
+- **mobile/**: Contains the React Native cross-platform mobile application with TypeScript.
 
 ## Installation Instructions
 
@@ -52,8 +53,14 @@ To set up QuizVibe locally, follow these steps:
     cd frontend
     npm install
     ```
+5. **Install Mobile Dependencies**:
+    Navigate to the `mobile` directory and install dependencies:
+    ```bash
+    cd mobile 
+    npm install
+    ```
 
-5. **Run the Application**:
+6. **Run the Application**:
 
     - **Backend**: Start the Express server from the `backend` directory.
         ```bash
@@ -66,10 +73,16 @@ To set up QuizVibe locally, follow these steps:
         cd frontend
         npm start
         ```
+    - **Mobile**: Start the mobile application from the `mobile` directory.
+      ```bash
+      cd mobile
+      npx expo start
+      ```
 
 6. **Access the Application**:
     - The React frontend should be running at `http://localhost:3000`.
     - The Express backend API should be running at `http://localhost:8000`.
+    - The React Native mobile application is served by Expo and can be used with the Expo Go app or in the browser.
 
 ## Contributing
 
