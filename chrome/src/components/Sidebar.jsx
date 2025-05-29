@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import menuBtn from "../assets/menu_white_48dp.svg";
@@ -7,12 +7,15 @@ import closeBtn from "../assets/close_white_24dp.svg";
 import houseBtn from "../assets/house.svg";
 
 const Sidebar = () => {
-  const apiUrl = window.location.origin.includes("localhost")
-    ? "http://localhost:8000"
-    : "https://general-knowledge-eta.vercel.app";
+  const apiUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8000"
+      : "https://general-knowledge-eta.vercel.app";
   const [sideMenu, setSideMenu] = useState(false);
   const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+  const sidebarRef = useRef(null);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -33,6 +36,29 @@ const Sidebar = () => {
     fetchCategories();
   }, [categories, apiUrl]);
 
+  // Close sidebar on Escape key or click outside
+  useEffect(() => {
+    if (!sideMenu) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setSideMenu(false);
+    };
+
+    const handleClickOutside = (e) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+        setSideMenu(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [sideMenu]);
+
   return (
     <>
       {!sideMenu && (
@@ -48,6 +74,7 @@ const Sidebar = () => {
         className={`fixed z-[1110] top-0 transition-all duration-500 ${
           sideMenu ? "left-0" : "-left-full md:-left-2/4"
         } w-4/5 md:w-1/4 h-screen overflow-y-scroll overflow-x-hidden bg-[tomato]`}
+        ref={sidebarRef}
       >
         <Link
           className={`absolute cursor-pointer bg-[green] hover:bg-[black] rounded-[3px] text-[1.2rem] text-[white] py-[6px] px-[12px] z-[1111] left-2 ${
@@ -90,22 +117,29 @@ const Sidebar = () => {
                 ></li>
               ))}
           {!isLoading &&
-            categories?.map((category, index) => (
-              <li
-                onClick={() => setSideMenu(false)}
-                key={index}
-                className="border-t-[1px] border-b-[1px] border-b-[black] border-solid border-[#ffffff1a] hover:bg-[green]"
-              >
-                <a
-                  key={index}
-                  href={`/quiz/${category.category}`}
-                  className="flex justify-center text-[1rem] text-[white] text-center w-full py-[1rem] duration-[.4s] hover:-translate-x-[5%]"
+            categories?.map((category, index) => {
+              const currentPath = decodeURIComponent(location.pathname); // Decode URL-encoded path
+              const isActive = currentPath === `/quiz/${category.category}`;
+
+              return (
+                <li
                   onClick={() => setSideMenu(false)}
+                  key={index}
+                  className={`border-t-[1px] border-b-[1px] border-b-[black] border-solid border-[#ffffff1a] ${
+                    isActive ? "bg-[green]" : ""
+                  } hover:bg-[green]`}
                 >
-                  {category.category}
-                </a>
-              </li>
-            ))}
+                  <Link
+                    key={index}
+                    to={`/quiz/${category.category}`}
+                    className="flex justify-center text-[1rem] text-[white] text-center w-full py-[1rem] duration-[.4s] hover:-translate-x-[5%]"
+                    onClick={() => setSideMenu(false)}
+                  >
+                    {category.category}
+                  </Link>
+                </li>
+              );
+            })}
         </ul>
       </div>
       <br />

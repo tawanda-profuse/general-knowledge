@@ -1,11 +1,11 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 const Quiz = () => {
   const { category } = useParams();
-  const apiUrl = window.location.origin.includes("localhost")
+  const apiUrl = process.env.NODE_ENV === "development"
     ? "http://localhost:8000"
     : "https://general-knowledge-eta.vercel.app";
   const [gameStarted, setGameStarted] = useState(false);
@@ -17,6 +17,8 @@ const Quiz = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [timer, setTimer] = useState(15);
   const navigate = useNavigate();
+  const location = useLocation();
+  const prevPathRef = useRef(location.pathname);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +40,14 @@ const Quiz = () => {
 
     fetchData();
   }, [apiUrl, category, navigate]);
+
+  useEffect(() => {
+    // If the path has changed, reload the page
+    if (prevPathRef.current !== location.pathname) {
+      window.location.reload();
+    }
+    prevPathRef.current = location.pathname;
+  }, [location.pathname]);
 
   const setNextQuestion = () => {
     setCurrentQuestionIndex((prev) => prev + 1);

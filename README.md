@@ -84,6 +84,8 @@ To set up QuizVibe locally, follow these steps:
     - The Express backend API should be running at `http://localhost:8000`.
     - The React Native mobile application is served by Expo and can be used with the Expo Go app or in the browser.
 
+The Chrome extension is available in the [chrome directory](/chrome/).
+
 ## Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.

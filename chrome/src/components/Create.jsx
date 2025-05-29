@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import cross from "../assets/close_white_24dp.svg";
 
 const Create = () => {
-  const apiUrl = window.location.origin.includes("localhost")
+  const apiUrl = process.env.NODE_ENV === "development"
     ? "http://localhost:8000"
     : "https://general-knowledge-eta.vercel.app";
   // States for the quiz category and category photo
