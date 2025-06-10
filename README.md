@@ -21,8 +21,8 @@ The project is organized into two main directories:
 
 - **frontend/**: Contains the React.js client-side application.
 - **backend/**: Contains the server-side code using Express.js, along with the MongoDB schema.
-    - `server.js`: Main file containing the configuration and setup for the Express server.
-    - `/models/quiz.js`: Defines the structure for quiz documents in MongoDB.
+  - `server.js`: Main file containing the configuration and setup for the Express server.
+  - `/models/quiz.js`: Defines the structure for quiz documents in MongoDB.
 - **mobile/**: Contains the React Native cross-platform mobile application with TypeScript.
 
 ## Installation Instructions
@@ -30,59 +30,64 @@ The project is organized into two main directories:
 To set up QuizVibe locally, follow these steps:
 
 1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/tawanda-profuse/general-knowledge.git
-    ```
+
+   ```bash
+   git clone https://github.com/tawanda-profuse/general-knowledge.git
+   ```
 
 2. **Install Backend Dependencies**:
-    Navigate to the `backend` directory and install dependencies:
-    ```bash
-    cd backend
-    npm install
-    ```
+   Navigate to the `backend` directory and install dependencies:
+
+   ```bash
+   cd backend
+   npm install
+   ```
 
 3. **Configure Environment Variables for Backend**:
-    Create a `.env` file in the `backend` directory with the following:
-    ```plaintext
-    MONGO_URI=your_mongodb_connection_string
-    ```
+   Create a `.env` file in the `backend` directory with the following:
+
+   ```plaintext
+   MONGO_URI=your_mongodb_connection_string
+   ```
 
 4. **Install Frontend Dependencies**:
-    Navigate to the `frontend` directory and install dependencies:
-    ```bash
-    cd frontend
-    npm install
-    ```
+   Navigate to the `frontend` directory and install dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
 5. **Install Mobile Dependencies**:
-    Navigate to the `mobile` directory and install dependencies:
-    ```bash
-    cd mobile 
-    npm install
-    ```
+   Navigate to the `mobile` directory and install dependencies:
+
+   ```bash
+   cd mobile
+   npm install
+   ```
 
 6. **Run the Application**:
 
-    - **Backend**: Start the Express server from the `backend` directory.
-        ```bash
-        cd backend
-        npm start
-        ```
+   - **Backend**: Start the Express server from the `backend` directory.
 
-    - **Frontend**: Start the React app from the `frontend` directory.
-        ```bash
-        cd frontend
-        npm start
-        ```
-    - **Mobile**: Start the mobile application from the `mobile` directory.
-      ```bash
-      cd mobile
-      npx expo start
-      ```
+     ```bash
+     cd backend
+     npm start
+     ```
 
-6. **Access the Application**:
-    - The React frontend should be running at `http://localhost:3000`.
-    - The Express backend API should be running at `http://localhost:8000`.
-    - The React Native mobile application is served by Expo and can be used with the Expo Go app or in the browser.
+   - **Frontend**: Start the React app from the `frontend` directory.
+     ```bash
+     cd frontend
+     npm start
+     ```
+   - **Mobile**: Start the mobile application from the `mobile` directory.
+     ```bash
+     cd mobile
+     npx expo start
+     ```
+
+7. **Access the Application**:
+   - The React frontend should be running at `http://localhost:3000`.
+   - The Express backend API should be running at `http://localhost:8000`.
+   - The React Native mobile application is served by Expo and can be used with the Expo Go app or in the browser.
 
 ## Chrome Extension
 
@@ -105,6 +110,15 @@ npm run build
 4. Click on **Load unpacked** and select the build folder previously generated.
 
 5. The QuizVibe Chrome extension should be available to use from your list of extensions.
+
+## Electron Desktop Application
+
+Using Electron for the desktop version of QuizVibe allows for cross-platform development with distribution to Linux, Apple, and Windows operating systems.
+
+1. To run the desktop application, first navigate to the [**desktop**](/desktop/) folder: `cd desktop`.
+2. Install all required packages: `npm install`.
+3. Depending on your operating system, run the `dist:mac`, `dist:win`, or `dist:linux` commands to transpile the project files, generate a build directory and generate an executable file using **electron-builder**. If this command run successfully, a folder called **dist** will be generated containing an executable file.
+4. Open and run an Electron window: `npm run dev`.
 
 ## Contributing
 
