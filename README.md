@@ -10,20 +10,23 @@
 
 ## Technologies Used
 
-- **Frontend**: React.js, Tailwind CSS
+- **Frontend**/**Chrome Extension**: React.js, Tailwind CSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Mobile**: React Native, TypeScript
+- **Desktop**: Electron, TypeScript, Vite
 
 ## Project Structure
 
-The project is organized into two main directories:
+The project is organized into two main directories. The mobile, chrome, and desktop directories are variants of the Frontend folder adjusted for the respective framework/platform:
 
 - **frontend/**: Contains the React.js client-side application.
 - **backend/**: Contains the server-side code using Express.js, along with the MongoDB schema.
   - `server.js`: Main file containing the configuration and setup for the Express server.
   - `/models/quiz.js`: Defines the structure for quiz documents in MongoDB.
-- **mobile/**: Contains the React Native cross-platform mobile application with TypeScript.
+    - **mobile/**: Contains the React Native cross-platform mobile application with TypeScript.
+    - **chrome**: Contains the React application with all necessary configurations for Google Chrome compatibility.
+    - **desktop**: Contains the application adapted for a cross-platform build with Electron.
 
 ## Installation Instructions
 
@@ -52,10 +55,12 @@ To set up QuizVibe locally, follow these steps:
 
 4. **Install Frontend Dependencies**:
    Navigate to the `frontend` directory and install dependencies:
+
    ```bash
    cd frontend
    npm install
    ```
+
 5. **Install Mobile Dependencies**:
    Navigate to the `mobile` directory and install dependencies:
 
@@ -74,11 +79,14 @@ To set up QuizVibe locally, follow these steps:
      ```
 
    - **Frontend**: Start the React app from the `frontend` directory.
+
      ```bash
      cd frontend
      npm start
      ```
+
    - **Mobile**: Start the mobile application from the `mobile` directory.
+
      ```bash
      cd mobile
      npx expo start
@@ -113,11 +121,11 @@ npm run build
 
 ## Electron Desktop Application
 
-Using Electron for the desktop version of QuizVibe allows for cross-platform development with distribution to Linux, Apple, and Windows operating systems.
+Using Electron for the desktop version of QuizVibe allows for cross-platform development with distribution to Linux, Mac OS, and Windows operating systems.
 
 1. To run the desktop application, first navigate to the [**desktop**](/desktop/) folder: `cd desktop`.
 2. Install all required packages: `npm install`.
-3. Depending on your operating system, run the `dist:mac`, `dist:win`, or `dist:linux` commands to transpile the project files, generate a build directory and generate an executable file using **electron-builder**. If this command run successfully, a folder called **dist** will be generated containing an executable file.
+3. Depending on your operating system, run the `dist:mac` for Mac OS, `dist:win` for Windows, or `dist:linux` for Linux commands to transpile the project files, generate a build directory and generate an executable file using **electron-builder**. If this command runs successfully, a folder called **dist** will be generated containing an executable file.
 4. Open and run an Electron window: `npm run dev`.
 
 ## Contributing
