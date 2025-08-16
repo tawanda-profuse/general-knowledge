@@ -29,7 +29,7 @@ app.get("/categories", async (req, res) => {
     const categories = await Quiz.find({ isApproved: true }).select("category");
 
     res.status(200).send({
-      categories: categories,
+      categories: categories
     });
   } catch (error) {
     console.error("Error: ", error);
